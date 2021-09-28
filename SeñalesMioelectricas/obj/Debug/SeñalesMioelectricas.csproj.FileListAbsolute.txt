@@ -1,0 +1,104 @@
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe.config
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.pdb
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csprojAssemblyReference.cache
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Form1.resources
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Properties.Resources.resources
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.GenerateResource.cache
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CoreCompileInputs.cache
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.exe
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.pdb
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Aplicacion.resources
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.dll
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.xml
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CopyComplete
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.AgregarPaciente.resources
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.BorrarPaciente.resources
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.EditarPaciente.resources
+C:\Users\skkyp\Documents\Proyecto Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.VistaAyuda.resources
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe.config
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.pdb
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.dll
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.xml
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csprojAssemblyReference.cache
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.AgregarPaciente.resources
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Aplicacion.resources
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.BorrarPaciente.resources
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.EditarPaciente.resources
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Form1.resources
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Properties.Resources.resources
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.VistaAyuda.resources
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.GenerateResource.cache
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CoreCompileInputs.cache
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CopyComplete
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.exe
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.pdb
+C:\Users\Drayden\Downloads\residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.GuardarInfo.resources
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe.config
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.pdb
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\bin\Debug\EntityFramework.dll
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\bin\Debug\EntityFramework.xml
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csprojAssemblyReference.cache
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.AgregarPaciente.resources
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Aplicacion.resources
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.BorrarPaciente.resources
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.EditarPaciente.resources
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Form1.resources
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.GuardarInfo.resources
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Properties.Resources.resources
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.VistaAyuda.resources
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.GenerateResource.cache
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CoreCompileInputs.cache
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CopyComplete
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.exe
+C:\Users\Gonzalo\Desktop\SeñalesMioelectricas\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.pdb
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe.config
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.pdb
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\bin\Debug\EntityFramework.dll
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\bin\Debug\EntityFramework.xml
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csprojAssemblyReference.cache
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.AgregarPaciente.resources
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Aplicacion.resources
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.BorrarPaciente.resources
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.EditarPaciente.resources
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Form1.resources
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.GuardarInfo.resources
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Properties.Resources.resources
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.VistaAyuda.resources
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.GenerateResource.cache
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CoreCompileInputs.cache
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CopyComplete
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.exe
+C:\Users\Drayden\Downloads\residencia 2.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.pdb
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe.config
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.pdb
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\bin\Debug\EntityFramework.dll
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\bin\Debug\EntityFramework.xml
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csprojAssemblyReference.cache
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.AgregarPaciente.resources
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Aplicacion.resources
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.BorrarPaciente.resources
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.EditarPaciente.resources
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Form1.resources
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.GuardarInfo.resources
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Properties.Resources.resources
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.VistaAyuda.resources
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.GenerateResource.cache
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CoreCompileInputs.cache
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CopyComplete
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.exe
+C:\Users\Drayden\Downloads\Residencia 3.0\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.pdb

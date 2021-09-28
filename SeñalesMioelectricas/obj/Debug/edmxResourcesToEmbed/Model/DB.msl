@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Señales_MioelectricasModel1StoreContainer" CdmEntityContainer="Señales_MioelectricasEntities1">
+    <EntitySetMapping Name="documentos">
+      <EntityTypeMapping TypeName="Señales_MioelectricasModel1.documentos">
+        <MappingFragment StoreEntitySet="documentos">
+          <ScalarProperty Name="ID_Documento" ColumnName="ID_Documento" />
+          <ScalarProperty Name="Nombre_Documento" ColumnName="Nombre_Documento" />
+          <ScalarProperty Name="Nombre_Real" ColumnName="Nombre_Real" />
+          <ScalarProperty Name="Doc" ColumnName="Doc" />
+          <ScalarProperty Name="ID_Paciente" ColumnName="ID_Paciente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medico">
+      <EntityTypeMapping TypeName="Señales_MioelectricasModel1.Medico">
+        <MappingFragment StoreEntitySet="Medico">
+          <ScalarProperty Name="ID_Medico" ColumnName="ID_Medico" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido_Paterno" ColumnName="Apellido_Paterno" />
+          <ScalarProperty Name="Apellido_Materno" ColumnName="Apellido_Materno" />
+          <ScalarProperty Name="ID_User" ColumnName="ID_User" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paciente">
+      <EntityTypeMapping TypeName="Señales_MioelectricasModel1.Paciente">
+        <MappingFragment StoreEntitySet="Paciente">
+          <ScalarProperty Name="ID_Paciente" ColumnName="ID_Paciente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido_Paterno" ColumnName="Apellido_Paterno" />
+          <ScalarProperty Name="Apellido_Materno" ColumnName="Apellido_Materno" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="ID_Medico" ColumnName="ID_Medico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="Señales_MioelectricasModel1.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="ID_User" ColumnName="ID_User" />
+          <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
