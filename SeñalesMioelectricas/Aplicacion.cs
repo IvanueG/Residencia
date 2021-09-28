@@ -17,7 +17,8 @@ namespace SeñalesMioelectricas
         private Button currentButton;
 
         //Conexion a la Base de Datos
-        Señales_MioelectricasEntities db = new Señales_MioelectricasEntities();
+        //Señales_MioelectricasEntities db = new Señales_MioelectricasEntities();
+        BaseDeDatosDataContext db = new BaseDeDatosDataContext();
         List<int> pacientes = new List<int>();
         int id;
 

@@ -46,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -72,6 +73,11 @@
     <Compile Include="Aplicacion.Designer.cs">
       <DependentUpon>Aplicacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseDeDatos.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDatos.dbml</DependentUpon>
+    </Compile>
     <Compile Include="BorrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,9 +85,6 @@
       <DependentUpon>BorrarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Convert.cs" />
-    <Compile Include="documentos.cs">
-      <DependentUpon>SeñalesModelo.tt</DependentUpon>
-    </Compile>
     <Compile Include="EditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,32 +104,8 @@
     <Compile Include="GuardarInfo.Designer.cs">
       <DependentUpon>GuardarInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Medico.cs">
-      <DependentUpon>SeñalesModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Paciente.cs">
-      <DependentUpon>SeñalesModelo.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SeñalesModelo.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SeñalesModelo.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeñalesModelo.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SeñalesModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeñalesModelo.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SeñalesModelo.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Usuario.cs">
-      <DependentUpon>SeñalesModelo.tt</DependentUpon>
-    </Compile>
     <Compile Include="VistaAyuda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +143,14 @@
     <EmbeddedResource Include="VistaAyuda.resx">
       <DependentUpon>VistaAyuda.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BaseDeDatos.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>BaseDeDatos.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDeDatos.dbml.layout">
+      <DependentUpon>BaseDeDatos.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -174,13 +161,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="SeñalesModelo.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SeñalesModelo.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="SeñalesModelo.edmx.diagram">
-      <DependentUpon>SeñalesModelo.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -236,18 +216,9 @@
   <ItemGroup>
     <None Include="Resources\EMG_Cyton_Setup.jpg" />
     <None Include="Resources\EMG_Electrode_Placement.jpg" />
-    <Content Include="SeñalesModelo.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SeñalesModelo.edmx</DependentUpon>
-      <LastGenOutput>SeñalesModelo.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="SeñalesModelo.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SeñalesModelo.edmx</DependentUpon>
-      <LastGenOutput>SeñalesModelo.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

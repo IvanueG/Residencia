@@ -13,7 +13,8 @@ namespace SeñalesMioelectricas
 {
     public partial class EditarPaciente : Form
     {
-        Señales_MioelectricasEntities db = new Señales_MioelectricasEntities();
+        //Señales_MioelectricasEntities db = new Señales_MioelectricasEntities();
+        BaseDeDatosDataContext db = new BaseDeDatosDataContext();
         List<int> pacientes = new List<int>();
         int punterolista;
 
@@ -78,7 +79,7 @@ namespace SeñalesMioelectricas
             }
 
             paciente.Sexo = sexo;
-            db.SaveChanges();
+            //db.SaveChanges();
 
             //Prueba de actualizacion de datos de pacientes
             Aplicacion form = new Aplicacion(UsuarioPrueba);

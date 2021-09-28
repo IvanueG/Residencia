@@ -52,15 +52,15 @@ namespace SeñalesMioelectricas
                 file = ms.ToArray();
             }
 
-            using (Señales_MioelectricasEntities db = new Señales_MioelectricasEntities())
+            using (BaseDeDatosDataContext db = new BaseDeDatosDataContext())
             {
                 documentos oDocument = new documentos();
                 oDocument.Nombre_Documento = txtNombreDoc.Text.Trim();
                 oDocument.Doc = file;
                 oDocument.Nombre_Real = openFileDialog1.SafeFileName;
                 oDocument.ID_Paciente = id; //Pone el valor de id tomado
-                db.documentos.Add(oDocument);
-                db.SaveChanges();
+                //db.documentos.Add(oDocument);
+                //db.SaveChanges();
             }
 
             Refrescar();
@@ -68,7 +68,7 @@ namespace SeñalesMioelectricas
 
         private void Refrescar()
         {
-            using (Señales_MioelectricasEntities db = new Señales_MioelectricasEntities())
+            using (BaseDeDatosDataContext db = new BaseDeDatosDataContext())
             {
                 var lst = from d in db.documentos
                           where id == d.ID_Paciente //Muestra los documentos especificos de la persona especifica
@@ -92,26 +92,26 @@ namespace SeñalesMioelectricas
             {
                 int ID_Documento = int.Parse(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
 
-                using (Señales_MioelectricasEntities db = new Señales_MioelectricasEntities())
+                using (BaseDeDatosDataContext db = new BaseDeDatosDataContext())
                 {
-                    var oDocument = db.documentos.Find(ID_Documento);
+                    //var oDocument = db.documentos.Find(ID_Documento);
 
                     string path = AppDomain.CurrentDomain.BaseDirectory;
                     string folder = path + "/temp/";
-                    string fullFilePath = folder + oDocument.Nombre_Real;
+                    //string fullFilePath = folder + oDocument.Nombre_Real;
 
                     //Validad si el folder temp existe si no lo crea
                     if (!Directory.Exists(folder))
                         Directory.CreateDirectory(folder);
 
                     //Valida si el archivo ya existe lo abre
-                    if (File.Exists(fullFilePath))
-                        Directory.GetAccessControl(fullFilePath);
+                    //if (File.Exists(fullFilePath))
+                    //    Directory.GetAccessControl(fullFilePath);
 
-                    //Abre el archivo con la herramienta que se encuentre instalada
-                    File.WriteAllBytes(fullFilePath, oDocument.Doc);
+                    ////Abre el archivo con la herramienta que se encuentre instalada
+                    //File.WriteAllBytes(fullFilePath, oDocument.Doc);
 
-                    Process.Start(fullFilePath);
+                    //Process.Start(fullFilePath);
                 }
             }
         }

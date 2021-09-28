@@ -111,7 +111,9 @@ namespace SeñalesMioelectricas
         //Conexion a la BD para comprobar si los datos son correctos en el Inicio de Sesion
         public bool Login(string usuario, string contraseña)
         {
-           Señales_MioelectricasEntities db = new Señales_MioelectricasEntities();
+            //Señales_MioelectricasEntities db = new Señales_MioelectricasEntities();
+            //Señales_MioelectricasDataSet db = new Señales_MioelectricasDataSet();
+            BaseDeDatosDataContext db = new BaseDeDatosDataContext();
            var usuario1 = db.Usuario.Where(u => u.Usuario1 == usuario && u.Contraseña==contraseña).ToList();
             
             

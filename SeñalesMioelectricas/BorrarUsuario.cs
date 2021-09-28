@@ -12,7 +12,8 @@ namespace SeñalesMioelectricas
 {
     public partial class BorrarPaciente : Form
     {
-        Señales_MioelectricasEntities db = new Señales_MioelectricasEntities();
+        //Señales_MioelectricasEntities db = new Señales_MioelectricasEntities();
+        BaseDeDatosDataContext db = new BaseDeDatosDataContext();
         List<int> pacientes = new List<int>();
         int punterolista;
 
@@ -62,8 +63,8 @@ namespace SeñalesMioelectricas
         private void btneliminar_Click(object sender, EventArgs e)
         {
             var paciente = db.Paciente.Where(w => w.ID_Paciente == punterolista).First();
-            db.Paciente.Remove(paciente);
-            db.SaveChanges();
+            //db.Paciente.Remove(paciente);
+            //db.SaveChanges();
 
             MessageBox.Show("Paciente eliminado con Exito", "Eliminado");
 
