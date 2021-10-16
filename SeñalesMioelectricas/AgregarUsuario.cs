@@ -62,8 +62,8 @@ namespace SeñalesMioelectricas
                     sexo = "Mujer";
                 }
 
-                //db.Paciente.Add(new Paciente {Nombre = NombrePaciente, Apellido_Paterno = Apellido_paterno, Apellido_Materno = Apellido_materno, Sexo = sexo, ID_Medico = idMedico });
-                //db.SaveChanges();
+                db.Paciente.InsertOnSubmit(new Paciente {Nombre = NombrePaciente, Apellido_Paterno = Apellido_paterno, Apellido_Materno = Apellido_materno, Sexo = sexo, ID_Medico = idMedico });
+                db.SubmitChanges();
 
 
                 MessageBox.Show("Paciente Agregado con Exito", "Exito");
@@ -85,6 +85,11 @@ namespace SeñalesMioelectricas
             Aplicacion form = new Aplicacion(UsuarioPrueba);
             form.Show();
             this.Close();
+        }
+
+        private void AgregarPaciente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

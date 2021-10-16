@@ -59,8 +59,8 @@ namespace SeñalesMioelectricas
                 oDocument.Doc = file;
                 oDocument.Nombre_Real = openFileDialog1.SafeFileName;
                 oDocument.ID_Paciente = id; //Pone el valor de id tomado
-                //db.documentos.Add(oDocument);
-                //db.SaveChanges();
+                db.documentos.InsertOnSubmit(oDocument);
+                db.SubmitChanges();
             }
 
             Refrescar();
@@ -94,26 +94,32 @@ namespace SeñalesMioelectricas
 
                 using (BaseDeDatosDataContext db = new BaseDeDatosDataContext())
                 {
-                    //var oDocument = db.documentos.Find(ID_Documento);
+
+                    var oDocument = db.documentos.Find (ID_Documento);
 
                     string path = AppDomain.CurrentDomain.BaseDirectory;
                     string folder = path + "/temp/";
-                    //string fullFilePath = folder + oDocument.Nombre_Real;
+                    string fullFilePath = folder + oDocument.Nombre_Real;
 
                     //Validad si el folder temp existe si no lo crea
                     if (!Directory.Exists(folder))
                         Directory.CreateDirectory(folder);
 
                     //Valida si el archivo ya existe lo abre
-                    //if (File.Exists(fullFilePath))
-                    //    Directory.GetAccessControl(fullFilePath);
+                    if (File.Exists(fullFilePath))
+                        Directory.GetAccessControl(fullFilePath);
 
-                    ////Abre el archivo con la herramienta que se encuentre instalada
-                    //File.WriteAllBytes(fullFilePath, oDocument.Doc);
+                    //Abre el archivo con la herramienta que se encuentre instalada
+                    File.WriteAllBytes(fullFilePath, oDocument.Doc);
 
-                    //Process.Start(fullFilePath);
+                    Process.Start(fullFilePath);
                 }
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

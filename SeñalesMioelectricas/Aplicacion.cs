@@ -222,13 +222,13 @@ namespace SeñalesMioelectricas
             {
                 serialPort1.Open();
                 btnIniciar.Enabled = false;
-            }
+        }
             catch
             {
                 MessageBox.Show("No se pudo Abrir el puerto");
                 btnIniciar.Enabled = true;
             }
-            serialPort1.DataReceived += serialPort1_DataReceived;
+    serialPort1.DataReceived += serialPort1_DataReceived;
 
             char[] buff = new char[1];
             buff[0] = 'b';
@@ -413,6 +413,16 @@ namespace SeñalesMioelectricas
                 bmp.Save(@"images/" + DateTime.Now.ToString("dd_MM_yyyy_hh_mm_ss") + ".bmp");
             }
             MessageBox.Show("Captura tomada con éxito");
+        }
+
+        private void Aplicacion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PanelInformacion_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private double[] filtering(double[] dane)
