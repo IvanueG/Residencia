@@ -95,24 +95,24 @@ namespace SeñalesMioelectricas
                 using (BaseDeDatosDataContext db = new BaseDeDatosDataContext())
                 {
 
-                    var oDocument = db.documentos.Find (ID_Documento);
+                    //var oDocument = db.documentos.Find (ID_Documento);
 
                     string path = AppDomain.CurrentDomain.BaseDirectory;
                     string folder = path + "/temp/";
-                    string fullFilePath = folder + oDocument.Nombre_Real;
+                    //string fullFilePath = folder + oDocument.Nombre_Real;
 
                     //Validad si el folder temp existe si no lo crea
-                    if (!Directory.Exists(folder))
-                        Directory.CreateDirectory(folder);
+                    //if (!Directory.Exists(folder))
+                    //    Directory.CreateDirectory(folder);
 
                     //Valida si el archivo ya existe lo abre
-                    if (File.Exists(fullFilePath))
-                        Directory.GetAccessControl(fullFilePath);
+                    //if (File.Exists(fullFilePath))
+                    //    Directory.GetAccessControl(fullFilePath);
 
                     //Abre el archivo con la herramienta que se encuentre instalada
-                    File.WriteAllBytes(fullFilePath, oDocument.Doc);
+                    //File.WriteAllBytes(fullFilePath, oDocument.Doc);
 
-                    Process.Start(fullFilePath);
+                    //Process.Start(fullFilePath);
                 }
             }
         }

@@ -37,10 +37,10 @@ namespace SeñalesMioelectricas
         {
             //Se Agrega una Especie de "PlaceHolder" a Cada Textbox
             //Agregando Acciones Cuando Ocurren Ciertos Eventos.
-            txtUsuario.Text = "Usuario";
-            txtUsuario.ForeColor = Color.LightGray;
+            txtUsuario.Text = "Ingresa un Usuario";
+            txtUsuario.ForeColor = Color.DarkGray;
             txtContraseña.Text = "Contraseña";
-            txtContraseña.ForeColor = Color.LightGray;
+            txtContraseña.ForeColor = Color.DarkGray;
             txtUsuario.GotFocus += new EventHandler(this.TextGotFocus);
             txtUsuario.LostFocus += new EventHandler(this.TextLostFocus);
             txtContraseña.GotFocus += new EventHandler(this.TextGotFocus);
@@ -57,7 +57,7 @@ namespace SeñalesMioelectricas
                 if (txtUsuario.Text == "Usuario")
                 {
                     txtUsuario.Text = "";
-                    txtUsuario.ForeColor = Color.Black;
+                    txtUsuario.ForeColor = Color.DarkGray;
                 }
             }
 
@@ -66,7 +66,7 @@ namespace SeñalesMioelectricas
                 if (txtContraseña.Text == "Contraseña")
                 {
                     txtContraseña.Text = "";
-                    txtContraseña.ForeColor = Color.Black;
+                    txtContraseña.ForeColor = Color.DarkGray;
                 }
             }
 
@@ -79,14 +79,14 @@ namespace SeñalesMioelectricas
             //Encuentra en Limpio, Entonces Agrega el Texto Por Defecto.
             if (txtUsuario.Text == "")
             {
-                txtUsuario.Text = "Usuario";
-                txtUsuario.ForeColor = Color.LightGray;
+                txtUsuario.Text = "Ingresa un Usuario";
+                txtUsuario.ForeColor = Color.DarkGray;
             }
 
             if (txtContraseña.Text == "")
             {
                 txtContraseña.Text = "Contraseña";
-                txtContraseña.ForeColor = Color.LightGray;
+                txtContraseña.ForeColor = Color.DarkGray;
             }
         }
 
@@ -107,6 +107,17 @@ namespace SeñalesMioelectricas
                 MessageBox.Show("Usuario y/o Contraseña Incorrectos", "Error Inicio de Sesion");
             
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_Click(object sender, EventArgs e)
+        {
+            txtUsuario.Clear();
+        }
+
 
         //Conexion a la BD para comprobar si los datos son correctos en el Inicio de Sesion
         public bool Login(string usuario, string contraseña)

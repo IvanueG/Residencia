@@ -36,7 +36,7 @@ namespace SeñalesMioelectricas
         {
             InitializeComponent();
             //Inicializa la forma vacia
-            PanelInformacion.Visible = false;
+            //PanelInformacion.Visible = false;
             PanelLectura.Visible = false;
             PanelPacientes.Visible = false;
         }
@@ -45,7 +45,7 @@ namespace SeñalesMioelectricas
         {
             InitializeComponent();
             //Inicializa la forma vacia
-            PanelInformacion.Visible = false;
+            //PanelInformacion.Visible = false;
             PanelLectura.Visible = false;
             PanelPacientes.Visible = false;
 
@@ -59,9 +59,9 @@ namespace SeñalesMioelectricas
 
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 
-            this.Width = 1502;
+            this.Width = 1322;
 
-            this.Height = 776;
+            this.Height = 743;
 
             Form1 form1 = new Form1();
             id = db.Usuario.Where(w => w.Usuario1 == user).Select(s => s.ID_User).FirstOrDefault();
@@ -101,12 +101,12 @@ namespace SeñalesMioelectricas
         //Structs
         private struct RGBColors
         {
-            public static Color color1 = Color.FromArgb(172, 126, 241);
-            public static Color color2 = Color.FromArgb(249, 118, 176);
-            public static Color color3 = Color.FromArgb(253, 138, 114);
-            public static Color color4 = Color.FromArgb(95, 77, 221);
-            public static Color color5 = Color.FromArgb(249, 88, 155);
-            public static Color color6 = Color.FromArgb(24, 161, 251);
+            public static Color color1 = Color.Transparent;
+            public static Color color2 = Color.Transparent;
+            public static Color color3 = Color.Transparent;
+            public static Color color4 = Color.Transparent;
+            public static Color color5 = Color.Transparent;
+            public static Color color6 = Color.Transparent;
         }
 
         //Lectura
@@ -136,8 +136,8 @@ namespace SeñalesMioelectricas
                 {
                     BotonInactivo();
                     currentButton = (Button)btnSender;
-                    currentButton.BackColor = Color.DeepSkyBlue;
-                    currentButton.ForeColor = Color.White;
+                    currentButton.BackColor = Color.Transparent;
+                    currentButton.ForeColor = Color.Transparent;
                     currentButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
@@ -146,11 +146,11 @@ namespace SeñalesMioelectricas
         //Regresa el boton al color original cuando se selecciona otro.
         private void BotonInactivo()
         {
-            foreach(Control BotonPrevio in PanelMenu.Controls)
+            foreach(Control BotonPrevio in PanelLectura.Controls)
             {
                 if(BotonPrevio.GetType()== typeof(Button))
                 {
-                    BotonPrevio.BackColor = Color.FromArgb(0, 23, 31);
+                    BotonPrevio.BackColor = Color.Transparent;
                     BotonPrevio.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
@@ -160,11 +160,15 @@ namespace SeñalesMioelectricas
         private void btnLectura_Click(object sender, EventArgs e)
         {
             BotonActivo(sender);
-            lblTituloEstadoActual.Text = "Lectura";
-            LogoEstadoActual.Image = Properties.Resources.Señal21;
-            PanelInformacion.Visible = true;
+            //lblTituloEstadoActual.Text = "Lectura";
+           // LogoEstadoActual.Image = Properties.Resources.Señal21;
+            //PanelInformacion.Visible = true;
             PanelLectura.Visible = true;
             PanelPacientes.Visible = false;
+
+            Image myimage = new Bitmap(@"C:\Residencia\Residencia\SeñalesMioelectricas\Resources\LECTURA.png");
+            this.BackgroundImage = myimage;
+            //Form1.ActiveForm.BackgroundImage = Image.FromFile(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal)+ @"\LECTURA.png");
 
         }
 
@@ -172,9 +176,9 @@ namespace SeñalesMioelectricas
         private void btnPaciente_Click(object sender, EventArgs e)
         {
             BotonActivo(sender);
-            lblTituloEstadoActual.Text = "Pacientes";
-            LogoEstadoActual.Image = Properties.Resources.Pacientes1;
-            PanelInformacion.Visible = true;
+            //lblTituloEstadoActual.Text = "Pacientes";
+            //LogoEstadoActual.Image = Properties.Resources.Pacientes1;
+            //PanelInformacion.Visible = true;
             PanelLectura.Visible = false;
             PanelPacientes.Visible = true;
         }
@@ -417,10 +421,26 @@ namespace SeñalesMioelectricas
 
         private void Aplicacion_Load(object sender, EventArgs e)
         {
-
+            PanelLectura.Visible = true;
+            PanelPacientes.Visible = true;
         }
 
         private void PanelInformacion_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PanelLectura_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUsuario_Click(object sender, EventArgs e)
         {
 
         }
