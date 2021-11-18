@@ -64,6 +64,5 @@ namespace SeñalesMioelectricas
         {
 			ExportarDatos(dataGridView1);
 		}
-
 	}
 }
