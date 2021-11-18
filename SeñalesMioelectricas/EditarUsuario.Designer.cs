@@ -50,18 +50,20 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SeñalesMioelectricas.Properties.Resources.Editar;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(81, 52);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 58);
+            this.pictureBox1.Size = new System.Drawing.Size(84, 89);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.btnGuardar.Location = new System.Drawing.Point(135, 410);
+            this.btnGuardar.Location = new System.Drawing.Point(202, 631);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(130, 34);
+            this.btnGuardar.Size = new System.Drawing.Size(195, 52);
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar Cambios";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -71,9 +73,10 @@
             // 
             this.radioFemenino.AutoSize = true;
             this.radioFemenino.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.radioFemenino.Location = new System.Drawing.Point(308, 353);
+            this.radioFemenino.Location = new System.Drawing.Point(462, 543);
+            this.radioFemenino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioFemenino.Name = "radioFemenino";
-            this.radioFemenino.Size = new System.Drawing.Size(78, 23);
+            this.radioFemenino.Size = new System.Drawing.Size(114, 33);
             this.radioFemenino.TabIndex = 21;
             this.radioFemenino.TabStop = true;
             this.radioFemenino.Text = "Femenino";
@@ -83,9 +86,10 @@
             // 
             this.radioMasculino.AutoSize = true;
             this.radioMasculino.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.radioMasculino.Location = new System.Drawing.Point(198, 353);
+            this.radioMasculino.Location = new System.Drawing.Point(297, 543);
+            this.radioMasculino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioMasculino.Name = "radioMasculino";
-            this.radioMasculino.Size = new System.Drawing.Size(82, 23);
+            this.radioMasculino.Size = new System.Drawing.Size(119, 33);
             this.radioMasculino.TabIndex = 20;
             this.radioMasculino.TabStop = true;
             this.radioMasculino.Text = "Masculino";
@@ -93,32 +97,36 @@
             // 
             // txtApellidoMaterno
             // 
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(236, 299);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(354, 460);
+            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
-            this.txtApellidoMaterno.Size = new System.Drawing.Size(150, 20);
+            this.txtApellidoMaterno.Size = new System.Drawing.Size(223, 26);
             this.txtApellidoMaterno.TabIndex = 19;
             // 
             // txtApellidoPaterno
             // 
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(236, 239);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(354, 368);
+            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
-            this.txtApellidoPaterno.Size = new System.Drawing.Size(150, 20);
+            this.txtApellidoPaterno.Size = new System.Drawing.Size(223, 26);
             this.txtApellidoPaterno.TabIndex = 18;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(236, 184);
+            this.txtNombre.Location = new System.Drawing.Point(354, 283);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(150, 20);
+            this.txtNombre.Size = new System.Drawing.Size(223, 26);
             this.txtNombre.TabIndex = 17;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.label5.Location = new System.Drawing.Point(129, 299);
+            this.label5.Location = new System.Drawing.Point(194, 460);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 19);
+            this.label5.Size = new System.Drawing.Size(153, 29);
             this.label5.TabIndex = 16;
             this.label5.Text = "Apellido Materno:";
             // 
@@ -126,9 +134,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.label4.Location = new System.Drawing.Point(129, 353);
+            this.label4.Location = new System.Drawing.Point(194, 543);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 19);
+            this.label4.Size = new System.Drawing.Size(54, 29);
             this.label4.TabIndex = 15;
             this.label4.Text = "Sexo:";
             // 
@@ -136,9 +145,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.label3.Location = new System.Drawing.Point(131, 237);
+            this.label3.Location = new System.Drawing.Point(196, 365);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 19);
+            this.label3.Size = new System.Drawing.Size(149, 29);
             this.label3.TabIndex = 14;
             this.label3.Text = "Apellido Paterno:";
             // 
@@ -146,9 +156,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(176, 185);
+            this.label2.Location = new System.Drawing.Point(264, 285);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 19);
+            this.label2.Size = new System.Drawing.Size(79, 29);
             this.label2.TabIndex = 13;
             this.label2.Text = "Nombre:";
             // 
@@ -156,9 +167,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 47);
+            this.label1.Location = new System.Drawing.Point(318, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 29);
+            this.label1.Size = new System.Drawing.Size(199, 43);
             this.label1.TabIndex = 12;
             this.label1.Text = "Editar Paciente";
             // 
@@ -166,27 +178,30 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(92, 128);
+            this.label6.Location = new System.Drawing.Point(138, 197);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 19);
+            this.label6.Size = new System.Drawing.Size(200, 29);
             this.label6.TabIndex = 24;
             this.label6.Text = "Selecciona un Paciente:";
             // 
             // cmbPaciente
             // 
             this.cmbPaciente.FormattingEnabled = true;
-            this.cmbPaciente.Location = new System.Drawing.Point(236, 128);
+            this.cmbPaciente.Location = new System.Drawing.Point(354, 197);
+            this.cmbPaciente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbPaciente.Name = "cmbPaciente";
-            this.cmbPaciente.Size = new System.Drawing.Size(195, 21);
+            this.cmbPaciente.Size = new System.Drawing.Size(290, 28);
             this.cmbPaciente.TabIndex = 25;
             this.cmbPaciente.SelectedIndexChanged += new System.EventHandler(this.cmbPaciente_SelectedIndexChanged);
             // 
             // btnCerrar
             // 
             this.btnCerrar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.btnCerrar.Location = new System.Drawing.Point(300, 410);
+            this.btnCerrar.Location = new System.Drawing.Point(450, 631);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(86, 34);
+            this.btnCerrar.Size = new System.Drawing.Size(129, 52);
             this.btnCerrar.TabIndex = 26;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -194,10 +209,10 @@
             // 
             // EditarPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(531, 505);
+            this.ClientSize = new System.Drawing.Size(796, 777);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.cmbPaciente);
             this.Controls.Add(this.label6);
@@ -214,9 +229,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EditarPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Paciente";
+            this.Load += new System.EventHandler(this.EditarPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

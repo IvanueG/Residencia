@@ -46,12 +46,20 @@ namespace SeñalesMioelectricas
         private void button1_Click(object sender, EventArgs e)
         {
             string NombrePaciente, Apellido_paterno, Apellido_materno, sexo;
+            int Gestante, Actividad_fisica, Diabetico, Medicamento;
             
+
+
             if (txtNombre.Text != "" && txtApellidoMaterno.Text != "" && txtApellidoPaterno.Text != "" && (radioMasculino.Checked == true || radioFemenino.Checked == true))
             {
                 NombrePaciente = txtNombre.Text;
                 Apellido_paterno = txtApellidoPaterno.Text;
                 Apellido_materno = txtApellidoMaterno.Text;
+                Gestante = cmbGestante.SelectedIndex;
+                Actividad_fisica = cmbActFisica.SelectedIndex;
+                Diabetico = cmbDiabetico.SelectedIndex;
+                Medicamento = cmbMedicamentos.SelectedIndex;
+
                 sexo = "";
                 if (radioMasculino.Checked == true)
                 {
@@ -62,9 +70,17 @@ namespace SeñalesMioelectricas
                     sexo = "Mujer";
                 }
 
-                db.Paciente.InsertOnSubmit(new Paciente {Nombre = NombrePaciente, Apellido_Paterno = Apellido_paterno, Apellido_Materno = Apellido_materno, Sexo = sexo, ID_Medico = idMedico });
+                db.Pacientes.InsertOnSubmit(new Paciente {
+                Nombre = NombrePaciente
+                ,Apellido_Paterno = Apellido_paterno
+                ,Apellido_Materno = Apellido_materno
+                ,Sexo = sexo
+                ,ID_Medico = idMedico
+                ,Gestante = Gestante
+                ,Actividad_fisica =Actividad_fisica
+                ,Diabetico=Diabetico
+                ,Medicamento=Medicamento });
                 db.SubmitChanges();
-
 
                 MessageBox.Show("Paciente Agregado con Exito", "Exito");
 

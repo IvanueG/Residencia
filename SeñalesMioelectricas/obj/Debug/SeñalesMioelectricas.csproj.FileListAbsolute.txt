@@ -146,3 +146,4 @@ C:\Users\alons\OneDrive\Escritorio\Universidad\Residencia GIT\Residencia\Señale
 C:\Users\alons\OneDrive\Escritorio\Universidad\Residencia GIT\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.exe
 C:\Users\alons\OneDrive\Escritorio\Universidad\Residencia GIT\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.pdb
 C:\Users\alons\OneDrive\Escritorio\Universidad\Residencia GIT\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.ResolveComReference.cache
+C:\Users\alons\OneDrive\Escritorio\Universidad\Residencia GIT\Residencia\SeñalesMioelectricas\bin\Debug\Sqlhelper.dll

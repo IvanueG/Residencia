@@ -93,19 +93,34 @@ namespace SeñalesMioelectricas
         //Boton Iniciar Sesion
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            
-            usuario = txtUsuario.Text;
-            contraseña = txtContraseña.Text;
 
-            if (Login(usuario, contraseña) == true)
+            //usuario = txtUsuario.Text;
+            //contraseña = txtContraseña.Text;
+
+            //if (Login(usuario, contraseña) == true)
+            //{
+            //    Aplicacion form = new Aplicacion(usuario);
+            //    form.Show();
+            //    this.Hide();
+            //}
+            //else
+            //    MessageBox.Show("Usuario y/o Contraseña Incorrectos", "Error Inicio de Sesion");
+
+            DataTable pass = DL.Trae_UsuarioPass(txtUsuario.Text);
+            string pass1 = pass.Rows[0]["Contraseña"].ToString();
+
+            if (pass1 == txtContraseña.Text)
             {
                 Aplicacion form = new Aplicacion(usuario);
                 form.Show();
                 this.Hide();
             }
             else
+            {
                 MessageBox.Show("Usuario y/o Contraseña Incorrectos", "Error Inicio de Sesion");
-            
+            }
+
+
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -125,7 +140,7 @@ namespace SeñalesMioelectricas
             //Señales_MioelectricasEntities db = new Señales_MioelectricasEntities();
             //Señales_MioelectricasDataSet db = new Señales_MioelectricasDataSet();
             BaseDeDatosDataContext db = new BaseDeDatosDataContext();
-           var usuario1 = db.Usuario.Where(u => u.Usuario1 == usuario && u.Contraseña==contraseña).ToList();
+           var usuario1 = db.Usuarios.Where(u => u.Usuario1 == usuario && u.Contraseña==contraseña).ToList();
             
             
             if ( usuario1.Count() != 0 )

@@ -48,7 +48,7 @@ namespace SeñalesMioelectricas
 
             var usuario = db.Medico.Where(c => c.ID_User == id).FirstOrDefault();
 
-            var nombrespacientes = db.Paciente.Where(w => w.ID_Medico == usuario.ID_Medico).ToList();
+            var nombrespacientes = db.Pacientes.Where(w => w.ID_Medico == usuario.ID_Medico).ToList();
 
             pacientes.Clear();
             foreach (var name in nombrespacientes)
@@ -62,7 +62,7 @@ namespace SeñalesMioelectricas
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            var paciente = db.Paciente.Where(w => w.ID_Paciente == punterolista).First();
+            var paciente = db.Pacientes.Where(w => w.ID_Paciente == punterolista).First();
             //db.Paciente.Remove(paciente);
             //db.SaveChanges();
 
@@ -86,7 +86,7 @@ namespace SeñalesMioelectricas
         {
             int puntero = cmbPaciente.SelectedIndex;
             punterolista = pacientes[puntero];
-            var datospacientes = db.Paciente.Where(w => w.ID_Paciente == punterolista).First();
+            var datospacientes = db.Pacientes.Where(w => w.ID_Paciente == punterolista).First();
             txtNombre.Text = datospacientes.Nombre;
             txtApellidoPaterno.Text = datospacientes.Apellido_Paterno;
             txtApellidoMaterno.Text = datospacientes.Apellido_Materno;
@@ -100,6 +100,11 @@ namespace SeñalesMioelectricas
                 radioMasculino.Checked = true;
                 radioFemenino.Checked = false;
             }
+        }
+
+        private void BorrarPaciente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

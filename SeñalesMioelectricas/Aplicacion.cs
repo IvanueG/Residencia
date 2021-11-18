@@ -29,7 +29,7 @@ namespace SeñalesMioelectricas
         string puerto;
 
         //Variable para actualizacion de la aplicacion con base de datos
-        string UsuarioPrueba;
+        public string UsuarioPrueba;
 
 
         public Aplicacion()
@@ -51,7 +51,7 @@ namespace SeñalesMioelectricas
 
 
             //Prueba de actualizacion de datos de pacientes
-            UsuarioPrueba = user;
+             UsuarioPrueba = user;
 
 
             //Fija el Tamaño de la Ventana de Inicio de Sesion y se impide el tamaño de ventana completa.
@@ -64,22 +64,22 @@ namespace SeñalesMioelectricas
             this.Height = 743;
 
             Form1 form1 = new Form1();
-            id = db.Usuario.Where(w => w.Usuario1 == user).Select(s => s.ID_User).FirstOrDefault();
-            var usuario = db.Medico.Where(c => c.ID_User == id).FirstOrDefault();
+            //id = db.Usuarios.Where(w => w.Usuario1 == user).Select(s => s.ID_User).FirstOrDefault();
+            //var usuario = db.Medico.Where(c => c.ID_User == id).FirstOrDefault();
 
 
-            lblUsuario.Text = usuario.Nombre +"\r\n"+ usuario.Apellido_Paterno + " " + usuario.Apellido_Materno;
-            var nombrespacientes = db.Paciente.Where(w => w.ID_Medico == usuario.ID_Medico).ToList();
+            //lblUsuario.Text = usuario.Usuario +"\r\n"+ usuario.Apellido_Paterno + " " +  usuario.Apellido_Materno;
+            //var nombrespacientes = db.Pacientes.Where(w => w.ID_Medico == usuario.ID_Medico).ToList();
             
             
-            foreach(var name in nombrespacientes)
-            {
-                cmbPacientes.Items.Add(name.Nombre + " "+ name.Apellido_Paterno + " " + name.Apellido_Materno);
-                pacientes.Add(name.ID_Paciente);
+            //foreach(var name in nombrespacientes)
+            //{
+            //    cmbPacientes.Items.Add(name.Nombre + " "+ name.Apellido_Paterno + " " + name.Apellido_Materno);
+            //    pacientes.Add(name.ID_Paciente);
                 
-            }
+            //}
 
-            cmbPacientes.DropDownStyle = ComboBoxStyle.DropDownList;
+            //cmbPacientes.DropDownStyle = ComboBoxStyle.DropDownList;
 
             //Parte de Lectura
             this.DoubleBuffered = true;
@@ -288,7 +288,7 @@ namespace SeñalesMioelectricas
             int punterolista = pacientes[puntero];
             btnGuardar.Enabled = true;
             btnCaptura.Enabled = true;
-            var datospacientes = db.Paciente.Where(w => w.ID_Paciente == punterolista).First();
+            var datospacientes = db.Pacientes.Where(w => w.ID_Paciente == punterolista).First();
             txtNombre.Text = datospacientes.Nombre;
             txtApellido.Text = datospacientes.Apellido_Paterno + " " + datospacientes.Apellido_Materno;
             if(datospacientes.Sexo == "Mujer")

@@ -49,7 +49,7 @@ namespace SeñalesMioelectricas
 
             var usuario = db.Medico.Where(c => c.ID_User == id).FirstOrDefault();
 
-            var nombrespacientes = db.Paciente.Where(w => w.ID_Medico == usuario.ID_Medico).ToList();
+            var nombrespacientes = db.Pacientes.Where(w => w.ID_Medico == usuario.ID_Medico).ToList();
 
             pacientes.Clear();
             foreach (var name in nombrespacientes)
@@ -64,7 +64,7 @@ namespace SeñalesMioelectricas
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string sexo = "";
-            var paciente = db.Paciente.First(p => p.ID_Paciente == punterolista);
+            var paciente = db.Pacientes.First(p => p.ID_Paciente == punterolista);
             paciente.Nombre = txtNombre.Text;
             paciente.Apellido_Paterno = txtApellidoPaterno.Text;
             paciente.Apellido_Materno = txtApellidoMaterno.Text;
@@ -101,7 +101,7 @@ namespace SeñalesMioelectricas
         {
             int puntero = cmbPaciente.SelectedIndex;
             punterolista = pacientes[puntero];
-            var datospacientes = db.Paciente.Where(w => w.ID_Paciente == punterolista).First();
+            var datospacientes = db.Pacientes.Where(w => w.ID_Paciente == punterolista).First();
             txtNombre.Text = datospacientes.Nombre;
             txtApellidoPaterno.Text = datospacientes.Apellido_Paterno;
             txtApellidoMaterno.Text = datospacientes.Apellido_Materno;
@@ -115,6 +115,11 @@ namespace SeñalesMioelectricas
                 radioMasculino.Checked = true;
                 radioFemenino.Checked = false;
             }
+        }
+
+        private void EditarPaciente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

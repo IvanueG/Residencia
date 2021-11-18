@@ -123,7 +123,14 @@ namespace SeñalesMioelectricas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LogoUsuario {
+        internal static System.Drawing.Bitmap Logo
+        
+        
+        
+        
+        
+        
+        {
             get {
                 object obj = ResourceManager.GetObject("LogoUsuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
