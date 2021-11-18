@@ -27,7 +27,7 @@
         <classShapeMoniker Id="44eadc84-84aa-4b33-98b2-f579f48295e0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.75 : 3.25); (4.75 : 2.5881982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.75 : 3.25); (4.75 : 2.5881982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/BaseDeDatosDataContext/Medico/Medico_Paciente" />
       <nodes>
         <classShapeMoniker Id="964dc9c2-3a03-46da-ab4d-0b85917da2cc" />
@@ -47,5 +47,11 @@
         <classShapeMoniker Id="964dc9c2-3a03-46da-ab4d-0b85917da2cc" />
       </nodes>
     </associationConnector>
+    <classShape Id="cf16d687-ee76-4d55-8ea2-82efb7a56e68" absoluteBounds="6.875, 1, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/BaseDeDatosDataContext/ReporteV" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25433121-f13c-4b1d-8442-c615fb3a381b" absoluteBounds="6.89, 1.46, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

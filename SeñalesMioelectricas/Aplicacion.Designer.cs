@@ -78,10 +78,10 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.PanelAplicacionCuerpo = new System.Windows.Forms.Panel();
+            this.PanelLectura = new System.Windows.Forms.Panel();
+            this.cmbPacientes = new System.Windows.Forms.ComboBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.cmbPacientes = new System.Windows.Forms.ComboBox();
-            this.PanelLectura = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -102,7 +102,7 @@
             this.btnPaciente.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaciente.ForeColor = System.Drawing.Color.Transparent;
             this.btnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaciente.Location = new System.Drawing.Point(126, 469);
+            this.btnPaciente.Location = new System.Drawing.Point(115, 469);
             this.btnPaciente.Name = "btnPaciente";
             this.btnPaciente.Size = new System.Drawing.Size(159, 45);
             this.btnPaciente.TabIndex = 6;
@@ -134,7 +134,7 @@
             this.btnLectura.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLectura.ForeColor = System.Drawing.Color.Transparent;
             this.btnLectura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLectura.Location = new System.Drawing.Point(126, 399);
+            this.btnLectura.Location = new System.Drawing.Point(115, 399);
             this.btnLectura.Name = "btnLectura";
             this.btnLectura.Size = new System.Drawing.Size(159, 45);
             this.btnLectura.TabIndex = 3;
@@ -452,7 +452,7 @@
             this.PanelPacientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelPacientes.Location = new System.Drawing.Point(0, 688);
             this.PanelPacientes.Name = "PanelPacientes";
-            this.PanelPacientes.Size = new System.Drawing.Size(1306, 408);
+            this.PanelPacientes.Size = new System.Drawing.Size(1284, 408);
             this.PanelPacientes.TabIndex = 3;
             // 
             // FotoPaciente
@@ -522,7 +522,7 @@
             this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1106, 0);
+            this.panel1.Location = new System.Drawing.Point(1084, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 408);
             this.panel1.TabIndex = 6;
@@ -626,27 +626,8 @@
             this.PanelAplicacionCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelAplicacionCuerpo.Location = new System.Drawing.Point(0, 0);
             this.PanelAplicacionCuerpo.Name = "PanelAplicacionCuerpo";
-            this.PanelAplicacionCuerpo.Size = new System.Drawing.Size(1306, 704);
+            this.PanelAplicacionCuerpo.Size = new System.Drawing.Size(1284, 701);
             this.PanelAplicacionCuerpo.TabIndex = 2;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // cmbPacientes
-            // 
-            this.cmbPacientes.BackColor = System.Drawing.Color.White;
-            this.cmbPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbPacientes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPacientes.ForeColor = System.Drawing.Color.Black;
-            this.cmbPacientes.FormattingEnabled = true;
-            this.cmbPacientes.Location = new System.Drawing.Point(360, 197);
-            this.cmbPacientes.Name = "cmbPacientes";
-            this.cmbPacientes.Size = new System.Drawing.Size(272, 31);
-            this.cmbPacientes.TabIndex = 3;
-            this.cmbPacientes.SelectedIndexChanged += new System.EventHandler(this.cmbPacientes_SelectedIndexChanged);
             // 
             // PanelLectura
             // 
@@ -685,9 +666,28 @@
             this.PanelLectura.Font = new System.Drawing.Font("Bahnschrift Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLectura.Location = new System.Drawing.Point(0, 0);
             this.PanelLectura.Name = "PanelLectura";
-            this.PanelLectura.Size = new System.Drawing.Size(1306, 688);
+            this.PanelLectura.Size = new System.Drawing.Size(1284, 688);
             this.PanelLectura.TabIndex = 2;
             this.PanelLectura.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelLectura_Paint);
+            // 
+            // cmbPacientes
+            // 
+            this.cmbPacientes.BackColor = System.Drawing.Color.White;
+            this.cmbPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbPacientes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPacientes.ForeColor = System.Drawing.Color.Black;
+            this.cmbPacientes.FormattingEnabled = true;
+            this.cmbPacientes.Location = new System.Drawing.Point(360, 197);
+            this.cmbPacientes.Name = "cmbPacientes";
+            this.cmbPacientes.Size = new System.Drawing.Size(272, 31);
+            this.cmbPacientes.TabIndex = 3;
+            this.cmbPacientes.SelectedIndexChanged += new System.EventHandler(this.cmbPacientes_SelectedIndexChanged);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Aplicacion
             // 
@@ -696,7 +696,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1306, 704);
+            this.ClientSize = new System.Drawing.Size(1284, 701);
             this.Controls.Add(this.PanelAplicacionCuerpo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1154, 669);
