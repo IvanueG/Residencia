@@ -45,55 +45,29 @@ namespace SeñalesMioelectricas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string NombrePaciente, Apellido_paterno, Apellido_materno, sexo;
-            int Gestante, Actividad_fisica, Diabetico, Medicamento;
-            
-
-
-            if (txtNombre.Text != "" && txtApellidoMaterno.Text != "" && txtApellidoPaterno.Text != "" && (radioMasculino.Checked == true || radioFemenino.Checked == true))
+            try
             {
-                NombrePaciente = txtNombre.Text;
-                Apellido_paterno = txtApellidoPaterno.Text;
-                Apellido_materno = txtApellidoMaterno.Text;
-                Gestante = cmbGestante.SelectedIndex;
-                Actividad_fisica = cmbActFisica.SelectedIndex;
-                Diabetico = cmbDiabetico.SelectedIndex;
-                Medicamento = cmbMedicamentos.SelectedIndex;
+                DL.InsertaUsuario(
+                txtNombre.Text
+                , txtApellidoPaterno.Text
+                , txtApellidoMaterno.Text
+                , cmbSexo.SelectedIndex
+                , cmbGestante.SelectedIndex
+                , cmbActFisica.SelectedIndex
+                , cmbDiabetico.SelectedIndex
+                , cmbMedicamentos.SelectedIndex
+                );
 
-                sexo = "";
-                if (radioMasculino.Checked == true)
-                {
-                    sexo = "Hombre";
-                }
-                if (radioFemenino.Checked == true)
-                {
-                    sexo = "Mujer";
-                }
-
-                db.Pacientes.InsertOnSubmit(new Paciente {
-                Nombre = NombrePaciente
-                ,Apellido_Paterno = Apellido_paterno
-                ,Apellido_Materno = Apellido_materno
-                ,Sexo = sexo
-                ,ID_Medico = idMedico
-                ,Gestante = Gestante
-                ,Actividad_fisica =Actividad_fisica
-                ,Diabetico=Diabetico
-                ,Medicamento=Medicamento });
-                db.SubmitChanges();
-
-                MessageBox.Show("Paciente Agregado con Exito", "Exito");
-
-                //Prueba de actualizacion de datos de pacientes
-                Aplicacion form = new Aplicacion(UsuarioPrueba);
-                form.Show();
-
-                this.Close();
+                MessageBox.Show("Paciente registrado exitosamente");
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Error al consultar, validar con IT");
+            }
 
 
-            } else
-                MessageBox.Show("Favor de LLenar todos los campos solicitados y no dejar ninguno en blanco", "Error Espacios en Blanco");
         }
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {

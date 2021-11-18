@@ -37,8 +37,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
             this.txtApellidoMaterno = new System.Windows.Forms.TextBox();
-            this.radioMasculino = new System.Windows.Forms.RadioButton();
-            this.radioFemenino = new System.Windows.Forms.RadioButton();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -48,8 +46,9 @@
             this.cmbDiabetico = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbMedicamentos = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.cmbActFisica = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbSexo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,32 +130,6 @@
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(223, 26);
             this.txtApellidoMaterno.TabIndex = 7;
-            // 
-            // radioMasculino
-            // 
-            this.radioMasculino.AutoSize = true;
-            this.radioMasculino.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.radioMasculino.Location = new System.Drawing.Point(287, 388);
-            this.radioMasculino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioMasculino.Name = "radioMasculino";
-            this.radioMasculino.Size = new System.Drawing.Size(119, 33);
-            this.radioMasculino.TabIndex = 8;
-            this.radioMasculino.TabStop = true;
-            this.radioMasculino.Text = "Masculino";
-            this.radioMasculino.UseVisualStyleBackColor = true;
-            // 
-            // radioFemenino
-            // 
-            this.radioFemenino.AutoSize = true;
-            this.radioFemenino.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.radioFemenino.Location = new System.Drawing.Point(451, 388);
-            this.radioFemenino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioFemenino.Name = "radioFemenino";
-            this.radioFemenino.Size = new System.Drawing.Size(114, 33);
-            this.radioFemenino.TabIndex = 9;
-            this.radioFemenino.TabStop = true;
-            this.radioFemenino.Text = "Femenino";
-            this.radioFemenino.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
@@ -258,17 +231,6 @@
             this.cmbMedicamentos.Size = new System.Drawing.Size(121, 28);
             this.cmbMedicamentos.TabIndex = 17;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(446, 208);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(194, 29);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Nivel Actividad Fisica :";
-            // 
             // cmbActFisica
             // 
             this.cmbActFisica.FormattingEnabled = true;
@@ -281,12 +243,35 @@
             this.cmbActFisica.Size = new System.Drawing.Size(121, 28);
             this.cmbActFisica.TabIndex = 19;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(446, 208);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(194, 29);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Nivel Actividad Fisica :";
+            // 
+            // cmbSexo
+            // 
+            this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.Items.AddRange(new object[] {
+            "Femenino",
+            "Masculino"});
+            this.cmbSexo.Location = new System.Drawing.Point(244, 389);
+            this.cmbSexo.Name = "cmbSexo";
+            this.cmbSexo.Size = new System.Drawing.Size(121, 28);
+            this.cmbSexo.TabIndex = 21;
+            // 
             // AgregarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(796, 561);
+            this.Controls.Add(this.cmbSexo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cmbActFisica);
             this.Controls.Add(this.label8);
@@ -298,8 +283,6 @@
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.radioFemenino);
-            this.Controls.Add(this.radioMasculino);
             this.Controls.Add(this.txtApellidoMaterno);
             this.Controls.Add(this.txtApellidoPaterno);
             this.Controls.Add(this.txtNombre);
@@ -330,8 +313,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellidoPaterno;
         private System.Windows.Forms.TextBox txtApellidoMaterno;
-        private System.Windows.Forms.RadioButton radioMasculino;
-        private System.Windows.Forms.RadioButton radioFemenino;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCerrar;
@@ -341,7 +322,8 @@
         private System.Windows.Forms.ComboBox cmbDiabetico;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbMedicamentos;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbActFisica;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbSexo;
     }
 }

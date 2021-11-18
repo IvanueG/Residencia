@@ -26,7 +26,7 @@ namespace SeñalesMioelectricas
 
         private void Reporte_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = dl.listareporte();
+			dataGridView1.DataSource = DL.Trae_Reporte();
         }
 
 		private void ExportarDatos(DataGridView datalistado)

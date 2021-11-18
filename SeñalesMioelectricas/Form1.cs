@@ -94,18 +94,6 @@ namespace SeñalesMioelectricas
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
 
-            //usuario = txtUsuario.Text;
-            //contraseña = txtContraseña.Text;
-
-            //if (Login(usuario, contraseña) == true)
-            //{
-            //    Aplicacion form = new Aplicacion(usuario);
-            //    form.Show();
-            //    this.Hide();
-            //}
-            //else
-            //    MessageBox.Show("Usuario y/o Contraseña Incorrectos", "Error Inicio de Sesion");
-
             DataTable pass = DL.Trae_UsuarioPass(txtUsuario.Text);
             string pass1 = pass.Rows[0]["Contraseña"].ToString();
 
