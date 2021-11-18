@@ -425,10 +425,6 @@ namespace SeñalesMioelectricas
             PanelPacientes.Visible = true;
         }
 
-        private void PanelInformacion_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void PanelLectura_Paint(object sender, PaintEventArgs e)
         {
@@ -436,11 +432,6 @@ namespace SeñalesMioelectricas
         }
 
         private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblUsuario_Click(object sender, EventArgs e)
         {
 
         }

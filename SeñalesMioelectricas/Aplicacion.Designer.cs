@@ -97,7 +97,7 @@
             this.btnPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPaciente.BackColor = System.Drawing.Color.Transparent;
             this.btnPaciente.FlatAppearance.BorderSize = 0;
-            this.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPaciente.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaciente.ForeColor = System.Drawing.Color.Transparent;
@@ -113,7 +113,7 @@
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Transparent;
@@ -129,7 +129,7 @@
             this.btnLectura.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLectura.BackColor = System.Drawing.Color.Transparent;
             this.btnLectura.FlatAppearance.BorderSize = 0;
-            this.btnLectura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LawnGreen;
+            this.btnLectura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLectura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLectura.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLectura.ForeColor = System.Drawing.Color.Transparent;
@@ -397,7 +397,7 @@
             this.btnDetener.Name = "btnDetener";
             this.btnDetener.Size = new System.Drawing.Size(75, 40);
             this.btnDetener.TabIndex = 1;
-            this.btnDetener.UseVisualStyleBackColor = false;
+            this.btnDetener.UseVisualStyleBackColor = true;
             this.btnDetener.Click += new System.EventHandler(this.btnDetener_Click);
             // 
             // btnIniciar
@@ -532,7 +532,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.White;
             this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = global::SeñalesMioelectricas.Properties.Resources.Eliminar;
@@ -550,7 +550,7 @@
             this.btnEditar.BackColor = System.Drawing.Color.White;
             this.btnEditar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = global::SeñalesMioelectricas.Properties.Resources.Editar;
@@ -568,7 +568,7 @@
             this.btnAgregar.BackColor = System.Drawing.Color.White;
             this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = global::SeñalesMioelectricas.Properties.Resources.Añadir;
