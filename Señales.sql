@@ -30,10 +30,9 @@ Doc varbinary(max),
 ID_Paciente int foreign key references Paciente(ID_Paciente))
 
 
-insert into Usuario values('MartinHdez','1234'),
-insert into Usuario values('Alejandro','4321'),
-insert into Medico values('Martin','Laguna','Hernandez',1)
-insert into Medico values('Alejandro','Gonzalez','Segura',2)
+insert into Usuario values('Ivanue','1234')
+insert into Medico values('Ivanue','Garcia','Ramirez',1)
 
 Select*From Paciente
 Select*From Usuario
+Select*From Medico

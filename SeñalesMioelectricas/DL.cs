@@ -65,7 +65,6 @@ namespace SeñalesMioelectricas
 
             SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query, Par);
 
-
         }
 
         public static DataTable Trae_Reporte()
@@ -76,7 +75,5 @@ namespace SeñalesMioelectricas
             return dtReporte = SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query).Tables[0];
 
         }
-
-
     }
 }

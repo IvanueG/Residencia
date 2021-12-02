@@ -18,7 +18,6 @@ namespace SeñalesMioelectricas
     {
         DL dl = new DL();
        
-
         public Reporte()
         {
             InitializeComponent();

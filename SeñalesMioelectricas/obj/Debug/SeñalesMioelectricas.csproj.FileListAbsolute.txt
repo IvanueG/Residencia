@@ -147,3 +147,28 @@ C:\Users\alons\OneDrive\Escritorio\Universidad\Residencia GIT\Residencia\Señale
 C:\Users\alons\OneDrive\Escritorio\Universidad\Residencia GIT\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.pdb
 C:\Users\alons\OneDrive\Escritorio\Universidad\Residencia GIT\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.ResolveComReference.cache
 C:\Users\alons\OneDrive\Escritorio\Universidad\Residencia GIT\Residencia\SeñalesMioelectricas\bin\Debug\Sqlhelper.dll
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.AssemblyReference.cache
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.SuggestedBindingRedirects.cache
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.ResolveComReference.cache
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.AgregarPaciente.resources
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Aplicacion.resources
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.BorrarPaciente.resources
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.EditarPaciente.resources
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Form1.resources
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.GuardarInfo.resources
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Properties.Resources.resources
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.Reporte.resources
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.VistaAyuda.resources
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.GenerateResource.cache
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CoreCompileInputs.cache
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.exe
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.pdb
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe.config
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.exe
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\bin\Debug\SeñalesMioelectricas.pdb
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.dll
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\bin\Debug\Sqlhelper.dll
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.xml
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\obj\Debug\SeñalesMioelectricas.csproj.CopyComplete

@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>SeñalesMioelectricas</RootNamespace>
     <AssemblyName>SeñalesMioelectricas</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -116,6 +116,11 @@
     <Compile Include="Reporte.Designer.cs">
       <DependentUpon>Reporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Señales_MioelectricasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Señales_MioelectricasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VistaAyuda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +179,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Señales_MioelectricasDataSet.xsc">
+      <DependentUpon>Señales_MioelectricasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Señales_MioelectricasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Señales_MioelectricasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Señales_MioelectricasDataSet.xss">
+      <DependentUpon>Señales_MioelectricasDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

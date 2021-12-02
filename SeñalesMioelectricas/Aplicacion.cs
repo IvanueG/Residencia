@@ -21,6 +21,7 @@ namespace SeñalesMioelectricas
         BaseDeDatosDataContext db = new BaseDeDatosDataContext();
         List<int> pacientes = new List<int>();
         int id;
+        public List<double> list = new List<double>();
 
         //Parte para la lectura
         StreamWriter sw;
@@ -166,7 +167,7 @@ namespace SeñalesMioelectricas
             PanelLectura.Visible = true;
             PanelPacientes.Visible = false;
 
-            Image myimage = new Bitmap(@"C:\Residencia\Residencia\SeñalesMioelectricas\Resources\LECTURA.png");
+            Image myimage = new Bitmap(@"C:\Users\ivanu\Documents\GitHub\Residencia\SeñalesMioelectricas\Resources\LECTURA.png");
             this.BackgroundImage = myimage;
             //Form1.ActiveForm.BackgroundImage = Image.FromFile(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal)+ @"\LECTURA.png");
 
@@ -249,16 +250,21 @@ namespace SeñalesMioelectricas
         private void timer1_Tick(object sender, EventArgs e)
         {
             double[] daneRys;
+            double valores;
             while (driver.Count > 0)
             {
                 DaneSerialPort data = driver.Dequeue();
-                for (int g = 0; g < data.variable. Length; g++)
+                for (int g = 0; g < data.variable.Length; g++)
                 {
+                    
+
                     daneRys = Convert.interpretBinaryStream(data.variable[g]);
+                    valores = double.Parse(data.variable.Last().ToString());
                     if (daneRys != null)
                     {
                         daneRys = ValueOrZero(daneRys);
-                        writeToFile(daneRys); //Esto estaba comentado
+                        //writeToFile(daneRys); //Esto estaba comentado
+                        list.Add(valores);
                         drawPlot(daneRys);
                     }
                 }
@@ -329,10 +335,14 @@ namespace SeñalesMioelectricas
             ayuda.Show();
         }
 
-        private void btnDetener_Click(object sender, EventArgs e)
+        public void btnDetener_Click(object sender, EventArgs e)
         {
             serialPort1.Close();
             btnIniciar.Enabled = true;
+
+            string promedio =  list.Average().ToString();
+
+            MessageBox.Show( promedio );
         }
 
         //Codigo Nuevo Residencia 2
