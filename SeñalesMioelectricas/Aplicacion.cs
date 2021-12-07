@@ -341,6 +341,7 @@ namespace SeñalesMioelectricas
             btnIniciar.Enabled = true;
 
             string promedio =  list.Average().ToString();
+            DL.InsertaHistorial( int.Parse(cmbPacientes.SelectedValue.ToString()) , promedio);
 
             MessageBox.Show( promedio );
         }
