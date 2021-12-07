@@ -49,8 +49,6 @@ namespace SeñalesMioelectricas
             {
                 DL.InsertaUsuario(
                 txtNombre.Text
-                , txtApellidoPaterno.Text
-                , txtApellidoMaterno.Text
                 , cmbSexo.SelectedIndex
                 , cmbGestante.SelectedIndex
                 , cmbActFisica.SelectedIndex

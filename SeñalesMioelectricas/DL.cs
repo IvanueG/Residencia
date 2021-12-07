@@ -36,8 +36,6 @@ namespace SeñalesMioelectricas
         }
 
         public static void InsertaUsuario(string Nombre
-        ,string Apellido_Paterno
-        ,string Apellido_Materno
         ,int Sexo
         ,int Gestante
         ,int Actividad_fisica
@@ -48,20 +46,16 @@ namespace SeñalesMioelectricas
             SqlParameter[] Par = new SqlParameter[10];
             Par[0] = new SqlParameter("@Nombre", SqlDbType.VarChar);
             Par[0].Value = Nombre;
-            Par[1] = new SqlParameter("@Apellido_Paterno", SqlDbType.VarChar);
-            Par[1].Value = Apellido_Paterno;
-            Par[2] = new SqlParameter("@Apellido_Materno", SqlDbType.VarChar);
-            Par[2].Value = Apellido_Materno;
-            Par[3] = new SqlParameter("@Sexo", SqlDbType.Int);
-            Par[3].Value = Sexo;
-            Par[4] = new SqlParameter("@Gestante", SqlDbType.Int);
-            Par[4].Value = Gestante;
-            Par[5] = new SqlParameter("@Actividad_fisica", SqlDbType.Int);
-            Par[5].Value = Actividad_fisica;
-            Par[6] = new SqlParameter("@Diabetico", SqlDbType.Int);
-            Par[6].Value = Diabetico;
-            Par[7] = new SqlParameter("@Medicamento", SqlDbType.Int);
-            Par[7].Value = Medicamento;
+            Par[1] = new SqlParameter("@Sexo", SqlDbType.Int);
+            Par[1].Value = Sexo;
+            Par[2] = new SqlParameter("@Gestante", SqlDbType.Int);
+            Par[2].Value = Gestante;
+            Par[3] = new SqlParameter("@Actividad_fisica", SqlDbType.Int);
+            Par[3].Value = Actividad_fisica;
+            Par[4] = new SqlParameter("@Diabetico", SqlDbType.Int);
+            Par[4].Value = Diabetico;
+            Par[5] = new SqlParameter("@Medicamento", SqlDbType.Int);
+            Par[5].Value = Medicamento;
 
             SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query, Par);
 

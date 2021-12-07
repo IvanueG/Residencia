@@ -290,21 +290,7 @@ namespace SeñalesMioelectricas
 
         private void cmbPacientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int puntero = cmbPacientes.SelectedIndex;
-            int punterolista = pacientes[puntero];
-            btnGuardar.Enabled = true;
-            btnCaptura.Enabled = true;
-            var datospacientes = db.Pacientes.Where(w => w.ID_Paciente == punterolista).First();
-            txtNombre.Text = datospacientes.Nombre;
-            txtApellido.Text = datospacientes.Apellido_Paterno + " " + datospacientes.Apellido_Materno;
-            if(datospacientes.Sexo == "Mujer")
-            {
-                FotoPaciente.Image = Properties.Resources.UsuarioMujer;
-            }
-            if(datospacientes.Sexo == "Hombre")
-            {
-                FotoPaciente.Image = Properties.Resources.UsuarioHombre;
-            }
+
         }
 
         private void drawPlot(double[] dane)
@@ -434,6 +420,15 @@ namespace SeñalesMioelectricas
         {
             PanelLectura.Visible = true;
             PanelPacientes.Visible = true;
+
+            DataTable CargaCombo = DL.Trae_Reporte();
+
+            cmbPacientes.DataSource = CargaCombo;
+            cmbPacientes.DisplayMember = "Nombre";
+            cmbPacientes.ValueMember = "ID_Paciente";
+            cmbPacientes.SelectedValue = CargaCombo.Rows[0]["ID_Paciente"].ToString();
+            cmbPacientes.Text = CargaCombo.Rows[0]["Nombre"].ToString();
+            
         }
 
 
