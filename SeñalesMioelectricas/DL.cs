@@ -67,6 +67,22 @@ namespace SeñalesMioelectricas
 
         }
 
+
+
+        public static void InsertaHistorial(int IdPaciente
+            ,string promedio)
+        {
+            string Query = "dbo.InsertaPaciente";
+            SqlParameter[] Par = new SqlParameter[10];
+            Par[0] = new SqlParameter("@IdPaciente", SqlDbType.Int);
+            Par[0].Value = IdPaciente;
+            Par[1] = new SqlParameter("@Promedio", SqlDbType.VarChar);
+            Par[1].Value = promedio;
+
+            SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query, Par);
+
+        }
+
         public static DataTable Trae_Reporte()
         {
 
