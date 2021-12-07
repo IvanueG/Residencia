@@ -66,7 +66,7 @@ namespace SeñalesMioelectricas
         public static void InsertaHistorial(int IdPaciente
             ,string promedio)
         {
-            string Query = "dbo.InsertaPaciente";
+            string Query = "dbo.Insertar_Historial";
             SqlParameter[] Par = new SqlParameter[10];
             Par[0] = new SqlParameter("@IdPaciente", SqlDbType.Int);
             Par[0].Value = IdPaciente;
