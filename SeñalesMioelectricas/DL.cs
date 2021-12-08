@@ -81,7 +81,7 @@ namespace SeñalesMioelectricas
         {
 
             DataTable dtReporte;
-            string Query = "dbo.ReporteGeneralPacientes";
+            string Query = "[dbo].[Reporte]";
             return dtReporte = SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query).Tables[0];
 
         }
