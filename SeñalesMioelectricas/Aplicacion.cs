@@ -186,14 +186,14 @@ namespace SeñalesMioelectricas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AgregarPaciente agregarPaciente = new AgregarPaciente(id, UsuarioPrueba);
+            AgregarPaciente agregarPaciente = new AgregarPaciente();
             agregarPaciente.Show();
             this.Close();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            EditarPaciente editarPaciente = new EditarPaciente(id, UsuarioPrueba);
+            EditarPaciente editarPaciente = new EditarPaciente();
             editarPaciente.Show();
             this.Close();
         }
@@ -423,11 +423,14 @@ namespace SeñalesMioelectricas
 
             DataTable CargaCombo = DL.Trae_Reporte();
 
+            DataRow ren = CargaCombo.NewRow();
+            ren["ID_Paciente"] = 0;
+            ren["Nombre"] = "-Seleccione";
             cmbPacientes.DataSource = CargaCombo;
             cmbPacientes.DisplayMember = "Nombre";
             cmbPacientes.ValueMember = "ID_Paciente";
-            cmbPacientes.SelectedValue = CargaCombo.Rows[0]["ID_Paciente"].ToString();
-            cmbPacientes.Text = CargaCombo.Rows[0]["Nombre"].ToString();
+            cmbPacientes.SelectedValue = 0;
+           
             
         }
 

@@ -24,67 +24,28 @@ namespace SeñalesMioelectricas
         public EditarPaciente()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
 
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-
-            this.Width = 547;
-
-            this.Height = 544;
         }
 
         public EditarPaciente(int id,string user)
         {
-            //Prueba de actualizacion de datos de pacientes
-            UsuarioPrueba = user;
+            ////Prueba de actualizacion de datos de pacientes
+            //UsuarioPrueba = user;
 
-            InitializeComponent();
-            this.MaximizeBox = false;
+            //InitializeComponent();
+            //this.MaximizeBox = false;
 
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 
-            this.Width = 547;
+            //this.Width = 547;
 
-            this.Height = 544;
+            //this.Height = 544;
 
-            var usuario = db.Medico.Where(c => c.ID_User == id).FirstOrDefault();
-
-            var nombrespacientes = db.Pacientes.Where(w => w.ID_Medico == usuario.ID_Medico).ToList();
-
-            pacientes.Clear();
-            foreach (var name in nombrespacientes)
-            {
-                cmbPaciente.Items.Add(name.Nombre + " " + name.Apellido_Paterno + " " + name.Apellido_Materno);
-                pacientes.Add(name.ID_Paciente);
-            }
-
-            cmbPaciente.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string sexo = "";
-            var paciente = db.Pacientes.First(p => p.ID_Paciente == punterolista);
-            paciente.Nombre = txtNombre.Text;
-            paciente.Apellido_Paterno = txtApellidoPaterno.Text;
-            paciente.Apellido_Materno = txtApellidoMaterno.Text;
-            
-            if (radioMasculino.Checked == true)
-            {
-                sexo = "Hombre";
-            }
-            if (radioFemenino.Checked == true)
-            {
-                sexo = "Mujer";
-            }
 
-            paciente.Sexo = sexo;
-            //db.SaveChanges();
-
-            //Prueba de actualizacion de datos de pacientes
-            Aplicacion form = new Aplicacion(UsuarioPrueba);
-            form.Show();
-            this.Close();
 
 
         }
@@ -99,27 +60,106 @@ namespace SeñalesMioelectricas
 
         private void cmbPaciente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int puntero = cmbPaciente.SelectedIndex;
-            punterolista = pacientes[puntero];
-            var datospacientes = db.Pacientes.Where(w => w.ID_Paciente == punterolista).First();
-            txtNombre.Text = datospacientes.Nombre;
-            txtApellidoPaterno.Text = datospacientes.Apellido_Paterno;
-            txtApellidoMaterno.Text = datospacientes.Apellido_Materno;
-            if(datospacientes.Sexo == "Mujer")
-            {
-                radioFemenino.Checked = true;
-                radioMasculino.Checked = false;
-            }
-            if(datospacientes.Sexo == "Hombre")
-            {
-                radioMasculino.Checked = true;
-                radioFemenino.Checked = false;
-            }
+
         }
 
         private void EditarPaciente_Load(object sender, EventArgs e)
         {
+            DataTable CargaCombo = DL.Trae_Reporte();
 
+
+            DataRow ren = CargaCombo.NewRow();
+            ren["ID_Paciente"] = 0;
+            ren["Nombre"] = "-Seleccione";
+            cmbUsuarios.DataSource = CargaCombo;
+            cmbUsuarios.DisplayMember = "Nombre";
+            cmbUsuarios.ValueMember = "ID_Paciente";
+            cmbUsuarios.SelectedValue = 0;
+        }
+
+        private void cmbUsuarios_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DataTable CargaCombo = DL.Trae_DatosPorPaciente(int.Parse(cmbUsuarios.SelectedValue.ToString()));
+
+            txtNombre.Text = CargaCombo.Rows[0]["Nombre"].ToString();
+            cmbMedicamentos.SelectedIndex = int.Parse(CargaCombo.Rows[0]["Medicamento"].ToString());
+            cmbDiabetico.SelectedIndex = int.Parse(CargaCombo.Rows[0]["Diabetico"].ToString());
+            cmbGestante.SelectedIndex = int.Parse(CargaCombo.Rows[0]["Gestante"].ToString());
+            cmbActFisica.SelectedIndex = int.Parse(CargaCombo.Rows[0]["Actividad_Fisica"].ToString());
+            txtEdad.Text = CargaCombo.Rows[0]["Edad"].ToString();
+
+            int sexo = int.Parse(CargaCombo.Rows[0]["Sexo"].ToString());
+
+            if (sexo == 0) { radioFemenino.Checked = true;}
+            else {radioMasculino.Checked = true;}
+        }
+
+        public void LimparControles()
+        {
+            cmbUsuarios.Text = "Seleccione";
+            txtNombre.Text = "";
+            radioFemenino.Checked = false;
+            radioMasculino.Checked = false;
+            cmbGestante.Text = "";
+            cmbActFisica.Text = "";
+            txtEdad.Text = "";
+            cmbDiabetico.Text = "";
+            cmbMedicamentos.Text = "";
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int sexo;
+                if (radioMasculino.Checked)
+                {
+                    sexo = 1;
+                }
+                else
+                {
+                    sexo = 0;
+                }
+
+
+                DL.EditarUsuario(
+                    int.Parse(cmbUsuarios.SelectedValue.ToString())
+                    , txtNombre.Text
+                    , sexo
+                    , cmbGestante.SelectedIndex
+                    , cmbActFisica.SelectedIndex
+                    , int.Parse(txtEdad.Text)
+                    , cmbDiabetico.SelectedIndex
+                    , cmbMedicamentos.SelectedIndex
+                );
+
+                MessageBox.Show("Paciente Editado correctamente");
+                LimparControles();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Error" + x); ;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EditarPaciente E = new EditarPaciente();
+            E.Close();
+            Aplicacion a = new Aplicacion();
+            a.Show();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Eliminar", "Seguro que desea eliminar usuario?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                DL.Eliminar_Paciente(int.Parse(cmbUsuarios.SelectedValue.ToString()));
+            }
+            else if (MessageBox.Show("Eliminar", "Seguro que desea eliminar usuario?", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+            }
         }
     }
+    
 }

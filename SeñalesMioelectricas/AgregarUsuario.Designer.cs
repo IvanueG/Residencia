@@ -37,7 +37,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
             this.txtApellidoMaterno = new System.Windows.Forms.TextBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.cmbGestante = new System.Windows.Forms.ComboBox();
@@ -48,7 +48,10 @@
             this.cmbMedicamentos = new System.Windows.Forms.ComboBox();
             this.cmbActFisica = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cmbSexo = new System.Windows.Forms.ComboBox();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.radioFemenino = new System.Windows.Forms.RadioButton();
+            this.radioMasculino = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,7 +92,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.label4.Location = new System.Drawing.Point(183, 388);
+            this.label4.Location = new System.Drawing.Point(183, 494);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 29);
@@ -131,17 +134,17 @@
             this.txtApellidoMaterno.Size = new System.Drawing.Size(223, 26);
             this.txtApellidoMaterno.TabIndex = 7;
             // 
-            // btnAgregar
+            // btnGuardar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.btnAgregar.Location = new System.Drawing.Point(206, 471);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(129, 52);
-            this.btnAgregar.TabIndex = 10;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.button1_Click);
+            this.btnGuardar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
+            this.btnGuardar.Location = new System.Drawing.Point(206, 561);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(129, 52);
+            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -156,7 +159,7 @@
             // btnCerrar
             // 
             this.btnCerrar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.btnCerrar.Location = new System.Drawing.Point(476, 471);
+            this.btnCerrar.Location = new System.Drawing.Point(476, 561);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(129, 52);
@@ -254,24 +257,61 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Nivel Actividad Fisica :";
             // 
-            // cmbSexo
+            // txtEdad
             // 
-            this.cmbSexo.FormattingEnabled = true;
-            this.cmbSexo.Items.AddRange(new object[] {
-            "Femenino",
-            "Masculino"});
-            this.cmbSexo.Location = new System.Drawing.Point(244, 389);
-            this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(121, 28);
-            this.cmbSexo.TabIndex = 21;
+            this.txtEdad.Location = new System.Drawing.Point(285, 395);
+            this.txtEdad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(223, 26);
+            this.txtEdad.TabIndex = 23;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
+            this.label10.Location = new System.Drawing.Point(207, 395);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 44);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Edad:";
+            // 
+            // radioFemenino
+            // 
+            this.radioFemenino.AutoSize = true;
+            this.radioFemenino.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
+            this.radioFemenino.Location = new System.Drawing.Point(410, 492);
+            this.radioFemenino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioFemenino.Name = "radioFemenino";
+            this.radioFemenino.Size = new System.Drawing.Size(114, 33);
+            this.radioFemenino.TabIndex = 49;
+            this.radioFemenino.TabStop = true;
+            this.radioFemenino.Text = "Femenino";
+            this.radioFemenino.UseVisualStyleBackColor = true;
+            // 
+            // radioMasculino
+            // 
+            this.radioMasculino.AutoSize = true;
+            this.radioMasculino.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
+            this.radioMasculino.Location = new System.Drawing.Point(245, 492);
+            this.radioMasculino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioMasculino.Name = "radioMasculino";
+            this.radioMasculino.Size = new System.Drawing.Size(119, 33);
+            this.radioMasculino.TabIndex = 48;
+            this.radioMasculino.TabStop = true;
+            this.radioMasculino.Text = "Masculino";
+            this.radioMasculino.UseVisualStyleBackColor = true;
             // 
             // AgregarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(796, 561);
-            this.Controls.Add(this.cmbSexo);
+            this.ClientSize = new System.Drawing.Size(796, 672);
+            this.Controls.Add(this.radioFemenino);
+            this.Controls.Add(this.radioMasculino);
+            this.Controls.Add(this.txtEdad);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cmbActFisica);
             this.Controls.Add(this.label8);
@@ -282,7 +322,7 @@
             this.Controls.Add(this.cmbGestante);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtApellidoMaterno);
             this.Controls.Add(this.txtApellidoPaterno);
             this.Controls.Add(this.txtNombre);
@@ -313,7 +353,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellidoPaterno;
         private System.Windows.Forms.TextBox txtApellidoMaterno;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.ComboBox cmbGestante;
@@ -324,6 +364,9 @@
         private System.Windows.Forms.ComboBox cmbMedicamentos;
         private System.Windows.Forms.ComboBox cmbActFisica;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmbSexo;
+        private System.Windows.Forms.TextBox txtEdad;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RadioButton radioFemenino;
+        private System.Windows.Forms.RadioButton radioMasculino;
     }
 }

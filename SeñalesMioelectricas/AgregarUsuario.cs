@@ -25,21 +25,17 @@ namespace SeñalesMioelectricas
             
         }
 
-        public AgregarPaciente(int id,string user)
+        public void LimparControles()
         {
-            //Prueba de actualizacion de datos de pacientes
-            UsuarioPrueba = user;
-
-            InitializeComponent();
-            this.MaximizeBox = false;
-
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-
-            this.Width = 547;
-
-            this.Height = 489;
-
-            idMedico = db.Medico.Where(w => w.ID_User == id).Select(s => s.ID_Medico).FirstOrDefault();
+            
+            txtNombre.Text = "";
+            radioFemenino.Checked = false;
+            radioMasculino.Checked = false;
+            cmbGestante.Text = "";
+            cmbActFisica.Text = "";
+            txtEdad.Text = "";
+            cmbDiabetico.Text = "";
+            cmbMedicamentos.Text = "";
         }
 
 
@@ -47,9 +43,19 @@ namespace SeñalesMioelectricas
         {
             try
             {
+                int sexo;
+                if (radioMasculino.Checked)
+                {
+                    sexo = 1;
+                }
+                else
+                {
+                    sexo = 0;
+                }
+
                 DL.InsertaUsuario(
                 txtNombre.Text
-                , cmbSexo.SelectedIndex
+                , sexo
                 , cmbGestante.SelectedIndex
                 , cmbActFisica.SelectedIndex
                 , cmbDiabetico.SelectedIndex
@@ -57,10 +63,11 @@ namespace SeñalesMioelectricas
                 );
 
                 MessageBox.Show("Paciente registrado exitosamente");
+                LimparControles();
             }
-            catch(Exception)
+            catch(Exception x)
             {
-                MessageBox.Show("Error al consultar, validar con IT");
+                MessageBox.Show("Error al consultar, validar con IT " + x);
             }
 
 

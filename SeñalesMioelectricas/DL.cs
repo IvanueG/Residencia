@@ -32,6 +32,32 @@ namespace SeñalesMioelectricas
            
             return password = SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query, Par).Tables[0];
 
+        }
+
+        public static DataTable Trae_DatosPorPaciente(int id)
+        {
+            string Query = "[dbo].[Trae_DatosPorPaciente]";
+            DataTable password;
+            SqlParameter[] Par = new SqlParameter[1];
+            Par[0] = new SqlParameter("@id", SqlDbType.Int);
+            Par[0].Value = id;
+
+
+            return password = SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query, Par).Tables[0];
+
+
+        }
+
+        public static void Eliminar_Paciente(int id)
+        {
+            string Query = "[dbo].[Eliminar_Paciente]";
+           
+            SqlParameter[] Par = new SqlParameter[1];
+            Par[0] = new SqlParameter("@id", SqlDbType.Int);
+            Par[0].Value = id;
+
+
+            SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query, Par);
 
         }
 
@@ -60,6 +86,38 @@ namespace SeñalesMioelectricas
             SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query, Par);
 
         }
+
+        public static void EditarUsuario(int id , string Nombre
+        , int Sexo
+        , int Gestante
+        , int Actividad_fisica
+        ,int Edad
+        , int Diabetico
+        , int Medicamento)
+        {
+            string Query = "dbo.Editar_Paciente";
+            SqlParameter[] Par = new SqlParameter[10];
+            Par[0] = new SqlParameter("@IDPaciente", SqlDbType.Int);
+            Par[0].Value = id;
+            Par[1] = new SqlParameter("@Nombre", SqlDbType.VarChar);
+            Par[1].Value = Nombre;
+            Par[2] = new SqlParameter("@Sexo", SqlDbType.Int);
+            Par[2].Value = Sexo;
+            Par[3] = new SqlParameter("@Gestante", SqlDbType.Int);
+            Par[3].Value = Gestante;
+            Par[4] = new SqlParameter("@Actividad", SqlDbType.Int);
+            Par[4].Value = Actividad_fisica;
+            Par[5] = new SqlParameter("@Edad", SqlDbType.Int);
+            Par[5].Value = Edad;
+            Par[6] = new SqlParameter("@Diabetico", SqlDbType.Int);
+            Par[6].Value = Diabetico;
+            Par[7] = new SqlParameter("@Medicamento", SqlDbType.Int);
+            Par[7].Value = Medicamento;
+
+            SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query, Par);
+
+        }
+
 
 
 
