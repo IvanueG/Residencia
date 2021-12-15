@@ -51,6 +51,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.txtNotas = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,7 +159,7 @@
             // btnCerrar
             // 
             this.btnCerrar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.btnCerrar.Location = new System.Drawing.Point(483, 521);
+            this.btnCerrar.Location = new System.Drawing.Point(483, 769);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(129, 52);
@@ -179,7 +181,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.btnAgregar.Location = new System.Drawing.Point(102, 521);
+            this.btnAgregar.Location = new System.Drawing.Point(102, 769);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(129, 52);
@@ -287,7 +289,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.btnEliminar.Location = new System.Drawing.Point(302, 521);
+            this.btnEliminar.Location = new System.Drawing.Point(302, 769);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(129, 52);
@@ -296,12 +298,34 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // txtNotas
+            // 
+            this.txtNotas.Location = new System.Drawing.Point(102, 593);
+            this.txtNotas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNotas.Multiline = true;
+            this.txtNotas.Name = "txtNotas";
+            this.txtNotas.Size = new System.Drawing.Size(538, 136);
+            this.txtNotas.TabIndex = 53;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
+            this.label5.Location = new System.Drawing.Point(104, 551);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 29);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Notas:";
+            // 
             // EditarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(730, 615);
+            this.ClientSize = new System.Drawing.Size(730, 1001);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtNotas);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.label3);
@@ -359,5 +383,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.TextBox txtNotas;
+        private System.Windows.Forms.Label label5;
     }
 }

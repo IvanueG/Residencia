@@ -91,9 +91,10 @@ namespace SeñalesMioelectricas
         , int Sexo
         , int Gestante
         , int Actividad_fisica
-        ,int Edad
+        , int Edad
         , int Diabetico
-        , int Medicamento)
+        , int Medicamento
+        , string Notas)
         {
             string Query = "dbo.Editar_Paciente";
             SqlParameter[] Par = new SqlParameter[10];
@@ -113,6 +114,8 @@ namespace SeñalesMioelectricas
             Par[6].Value = Diabetico;
             Par[7] = new SqlParameter("@Medicamento", SqlDbType.Int);
             Par[7].Value = Medicamento;
+            Par[8] = new SqlParameter("@Notas", SqlDbType.Int);
+            Par[8].Value = Notas;
 
             SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query, Par);
 

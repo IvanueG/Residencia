@@ -87,6 +87,7 @@ namespace SeñalesMioelectricas
             cmbGestante.SelectedIndex = int.Parse(CargaCombo.Rows[0]["Gestante"].ToString());
             cmbActFisica.SelectedIndex = int.Parse(CargaCombo.Rows[0]["Actividad_Fisica"].ToString());
             txtEdad.Text = CargaCombo.Rows[0]["Edad"].ToString();
+            txtNotas.Text = CargaCombo.Rows[0]["Notas"].ToString();
 
             int sexo = int.Parse(CargaCombo.Rows[0]["Sexo"].ToString());
 
@@ -155,6 +156,7 @@ namespace SeñalesMioelectricas
                         , int.Parse(txtEdad.Text)
                         , cmbDiabetico.SelectedIndex
                         , cmbMedicamentos.SelectedIndex
+                        , txtNotas.Text
                     );
 
                     MessageBox.Show("Paciente Editado correctamente");
