@@ -48,5 +48,10 @@ namespace SeñalesMioelectricas
             PanelElectrodos.Visible = false;
             PanelPlaca.Visible = true;
         }
+
+        private void VistaAyuda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

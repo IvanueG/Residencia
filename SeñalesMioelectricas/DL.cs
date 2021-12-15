@@ -122,7 +122,7 @@ namespace SeñalesMioelectricas
 
 
         public static void InsertaHistorial(int IdPaciente
-            ,string promedio)
+            ,string promedio, int Dolor_Percibido)
         {
             string Query = "dbo.Insertar_Historial";
             SqlParameter[] Par = new SqlParameter[10];
@@ -130,6 +130,9 @@ namespace SeñalesMioelectricas
             Par[0].Value = IdPaciente;
             Par[1] = new SqlParameter("@Promedio", SqlDbType.VarChar);
             Par[1].Value = promedio;
+            Par[2] = new SqlParameter("@Dolor_Percibido", SqlDbType.Int);
+            Par[2].Value = Dolor_Percibido;
+
 
             SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query, Par);
 

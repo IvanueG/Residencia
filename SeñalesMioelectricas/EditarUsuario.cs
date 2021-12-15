@@ -107,34 +107,59 @@ namespace SeñalesMioelectricas
             cmbMedicamentos.Text = "";
         }
 
+        public bool ValidarCampos()
+        {
+            if (
+             cmbActFisica.SelectedIndex == -1 ||
+             cmbDiabetico.SelectedIndex == -1 ||
+             cmbGestante.SelectedIndex == -1 ||
+             cmbMedicamentos.SelectedIndex == -1 ||
+             txtNombre.Text == "" ||
+             txtEdad.Text == "" ||
+             radioFemenino.Checked == false &&
+             radioMasculino.Checked == false
+            )
+            {
+                MessageBox.Show("Favor de llenar todos los campos");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
-                int sexo;
-                if (radioMasculino.Checked)
+                if (ValidarCampos() == true)
                 {
-                    sexo = 1;
+                    int sexo;
+                    if (radioMasculino.Checked)
+                    {
+                        sexo = 1;
+                    }
+                    else
+                    {
+                        sexo = 0;
+                    }
+
+
+                    DL.EditarUsuario(
+                        int.Parse(cmbUsuarios.SelectedValue.ToString())
+                        , txtNombre.Text
+                        , sexo
+                        , cmbGestante.SelectedIndex
+                        , cmbActFisica.SelectedIndex
+                        , int.Parse(txtEdad.Text)
+                        , cmbDiabetico.SelectedIndex
+                        , cmbMedicamentos.SelectedIndex
+                    );
+
+                    MessageBox.Show("Paciente Editado correctamente");
+                    LimparControles();
                 }
-                else
-                {
-                    sexo = 0;
-                }
-
-
-                DL.EditarUsuario(
-                    int.Parse(cmbUsuarios.SelectedValue.ToString())
-                    , txtNombre.Text
-                    , sexo
-                    , cmbGestante.SelectedIndex
-                    , cmbActFisica.SelectedIndex
-                    , int.Parse(txtEdad.Text)
-                    , cmbDiabetico.SelectedIndex
-                    , cmbMedicamentos.SelectedIndex
-                );
-
-                MessageBox.Show("Paciente Editado correctamente");
-                LimparControles();
             }
             catch (Exception x)
             {
@@ -152,12 +177,71 @@ namespace SeñalesMioelectricas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Eliminar", "Seguro que desea eliminar usuario?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            try
             {
-                DL.Eliminar_Paciente(int.Parse(cmbUsuarios.SelectedValue.ToString()));
+                if (MessageBox.Show("Eliminar", "Seguro que desea eliminar usuario?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+
+                    DL.Eliminar_Paciente(int.Parse(cmbUsuarios.SelectedValue.ToString()));
+                }
+                else if (MessageBox.Show("Eliminar", "Seguro que desea eliminar usuario?", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                }
             }
-            else if (MessageBox.Show("Eliminar", "Seguro que desea eliminar usuario?", MessageBoxButtons.YesNo) == DialogResult.No)
+            catch (Exception x)
             {
+                MessageBox.Show("Error al borrar usuario ya que cuenta con un historial favor de comunicarse con IT si requiere borrar usuario" + x);
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para backspace
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para que admita tecla de espacio
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //si no cumple nada de lo anterior que no lo deje pasar
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se admiten letras", "Atencion",
+               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //condicion para solo números
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para tecla backspace
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            /*verifica que pueda ingresar punto y también que solo pueda
+           ingresar un punto*/
+            else if ((e.KeyChar == '.') && (!txtEdad.Text.Contains(".")))
+            {
+                e.Handled = false;
+            }
+            //si no se cumple nada de lo anterior entonces que no lo deje pasar
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se admiten datos numéricos", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

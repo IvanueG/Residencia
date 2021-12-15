@@ -190,11 +190,12 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(187, 220);
+            this.txtNombre.Location = new System.Drawing.Point(192, 221);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(524, 26);
             this.txtNombre.TabIndex = 31;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label10
             // 
@@ -214,7 +215,7 @@
             this.label4.Location = new System.Drawing.Point(187, 417);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 44);
+            this.label4.Size = new System.Drawing.Size(56, 29);
             this.label4.TabIndex = 45;
             this.label4.Text = "Edad:";
             // 
@@ -271,7 +272,7 @@
             this.label3.Location = new System.Drawing.Point(111, 388);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 44);
+            this.label3.Size = new System.Drawing.Size(0, 29);
             this.label3.TabIndex = 50;
             // 
             // txtEdad
@@ -281,6 +282,7 @@
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(140, 26);
             this.txtEdad.TabIndex = 51;
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
             // btnEliminar
             // 
