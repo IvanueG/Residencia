@@ -43,29 +43,32 @@ namespace SeñalesMioelectricas
         {
             try
             {
-                int sexo;
-                if (radioMasculino.Checked)
+                if (ValidarCampos() == true)
                 {
-                    sexo = 1;
-                }
-                else
-                {
-                    sexo = 0;
-                }
+                    int sexo;
+                    if (radioMasculino.Checked)
+                    {
+                        sexo = 1;
+                    }
+                    else
+                    {
+                        sexo = 0;
+                    }
 
-                DL.InsertaUsuario(
-                txtNombre.Text
-                , sexo
-                , cmbGestante.SelectedIndex
-                , cmbActFisica.SelectedIndex
-                , cmbDiabetico.SelectedIndex
-                , cmbMedicamentos.SelectedIndex
-                );
+                    DL.InsertaUsuario(
+                    txtNombre.Text
+                    , sexo
+                    , cmbGestante.SelectedIndex
+                    , cmbActFisica.SelectedIndex
+                    , cmbDiabetico.SelectedIndex
+                    , cmbMedicamentos.SelectedIndex
+                    );
 
-                MessageBox.Show("Paciente registrado exitosamente");
-                LimparControles();
+                    MessageBox.Show("Paciente registrado exitosamente");
+                    LimparControles();
+                }
             }
-            catch(Exception x)
+            catch (Exception x)
             {
                 MessageBox.Show("Error al consultar, validar con IT " + x);
             }
@@ -85,6 +88,77 @@ namespace SeñalesMioelectricas
         private void AgregarPaciente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //condicion para solo letras
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para backspace
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para que admita tecla de espacio
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //si no cumple nada de lo anterior que no lo deje pasar
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se admiten letras", "Atencion",
+               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //condicion para solo números
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para tecla backspace
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            /*verifica que pueda ingresar punto y también que solo pueda
+           ingresar un punto*/
+            else if ((e.KeyChar == '.') && (!txtEdad.Text.Contains(".")))
+            {
+                e.Handled = false;
+            }
+            //si no se cumple nada de lo anterior entonces que no lo deje pasar
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se admiten datos numéricos", "Atencion",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+        public bool ValidarCampos()
+        {
+            if (
+             cmbActFisica.SelectedIndex == -1 ||
+             cmbDiabetico.SelectedIndex == -1 ||
+             cmbGestante.SelectedIndex == -1 ||
+             cmbMedicamentos.SelectedIndex == -1||
+             txtNombre.Text == ""||
+             txtEdad.Text ==""||
+             radioFemenino.Checked==false && 
+             radioMasculino.Checked==false         
+            )
+            {
+                MessageBox.Show("Favor de llenar todos los campos");
+                return false;
+            }
+            else { 
+            return true;
+            }
         }
     }
 }

@@ -445,6 +445,11 @@ namespace SeñalesMioelectricas
 
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private double[] filtering(double[] dane)
         {
             int standard = 0;

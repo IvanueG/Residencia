@@ -82,6 +82,7 @@
             this.cmbPacientes = new System.Windows.Forms.ComboBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -103,7 +104,7 @@
             this.btnPaciente.ForeColor = System.Drawing.Color.Transparent;
             this.btnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPaciente.Location = new System.Drawing.Point(153, 577);
-            this.btnPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.btnPaciente.Name = "btnPaciente";
             this.btnPaciente.Size = new System.Drawing.Size(212, 55);
             this.btnPaciente.TabIndex = 6;
@@ -119,7 +120,7 @@
             this.btnCerrarSesion.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.Location = new System.Drawing.Point(43, 766);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(355, 47);
             this.btnCerrarSesion.TabIndex = 5;
@@ -137,7 +138,7 @@
             this.btnLectura.ForeColor = System.Drawing.Color.Transparent;
             this.btnLectura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLectura.Location = new System.Drawing.Point(153, 491);
-            this.btnLectura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLectura.Margin = new System.Windows.Forms.Padding(4);
             this.btnLectura.Name = "btnLectura";
             this.btnLectura.Size = new System.Drawing.Size(212, 55);
             this.btnLectura.TabIndex = 3;
@@ -175,7 +176,7 @@
             this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAyuda.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAyuda.Location = new System.Drawing.Point(1549, 756);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(4);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(101, 36);
             this.btnAyuda.TabIndex = 4;
@@ -188,7 +189,7 @@
             this.radioNone.AutoSize = true;
             this.radioNone.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioNone.Location = new System.Drawing.Point(1438, 287);
-            this.radioNone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioNone.Margin = new System.Windows.Forms.Padding(4);
             this.radioNone.Name = "radioNone";
             this.radioNone.Size = new System.Drawing.Size(63, 28);
             this.radioNone.TabIndex = 5;
@@ -201,7 +202,7 @@
             this.radio50Hz.AutoSize = true;
             this.radio50Hz.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radio50Hz.Location = new System.Drawing.Point(1438, 144);
-            this.radio50Hz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radio50Hz.Margin = new System.Windows.Forms.Padding(4);
             this.radio50Hz.Name = "radio50Hz";
             this.radio50Hz.Size = new System.Drawing.Size(66, 28);
             this.radio50Hz.TabIndex = 3;
@@ -214,7 +215,7 @@
             this.radio60Hz.AutoSize = true;
             this.radio60Hz.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radio60Hz.Location = new System.Drawing.Point(1438, 215);
-            this.radio60Hz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radio60Hz.Margin = new System.Windows.Forms.Padding(4);
             this.radio60Hz.Name = "radio60Hz";
             this.radio60Hz.Size = new System.Drawing.Size(66, 28);
             this.radio60Hz.TabIndex = 4;
@@ -230,7 +231,7 @@
             this.btnCaptura.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaptura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
             this.btnCaptura.Location = new System.Drawing.Point(525, 650);
-            this.btnCaptura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCaptura.Margin = new System.Windows.Forms.Padding(4);
             this.btnCaptura.Name = "btnCaptura";
             this.btnCaptura.Size = new System.Drawing.Size(109, 82);
             this.btnCaptura.TabIndex = 6;
@@ -245,7 +246,7 @@
             this.btnDetenerEsc.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetenerEsc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
             this.btnDetenerEsc.Location = new System.Drawing.Point(671, 650);
-            this.btnDetenerEsc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDetenerEsc.Margin = new System.Windows.Forms.Padding(4);
             this.btnDetenerEsc.Name = "btnDetenerEsc";
             this.btnDetenerEsc.Size = new System.Drawing.Size(103, 82);
             this.btnDetenerEsc.TabIndex = 5;
@@ -259,7 +260,7 @@
             this.btnEscribir.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscribir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
             this.btnEscribir.Location = new System.Drawing.Point(673, 582);
-            this.btnEscribir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEscribir.Margin = new System.Windows.Forms.Padding(4);
             this.btnEscribir.Name = "btnEscribir";
             this.btnEscribir.Size = new System.Drawing.Size(100, 43);
             this.btnEscribir.TabIndex = 4;
@@ -274,7 +275,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
             this.btnGuardar.Location = new System.Drawing.Point(535, 583);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(91, 41);
             this.btnGuardar.TabIndex = 3;
@@ -284,7 +285,7 @@
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(927, 142);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar1.Maximum = 4;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -350,7 +351,7 @@
             // trackBar2
             // 
             this.trackBar2.Location = new System.Drawing.Point(1166, 143);
-            this.trackBar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBar2.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar2.Maximum = 4;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -419,7 +420,7 @@
             this.btnDetener.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetener.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
             this.btnDetener.Location = new System.Drawing.Point(673, 416);
-            this.btnDetener.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDetener.Margin = new System.Windows.Forms.Padding(4);
             this.btnDetener.Name = "btnDetener";
             this.btnDetener.Size = new System.Drawing.Size(100, 49);
             this.btnDetener.TabIndex = 1;
@@ -434,7 +435,7 @@
             this.btnIniciar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
             this.btnIniciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIniciar.Location = new System.Drawing.Point(536, 416);
-            this.btnIniciar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIniciar.Margin = new System.Windows.Forms.Padding(4);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(91, 49);
             this.btnIniciar.TabIndex = 0;
@@ -449,7 +450,7 @@
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(860, 377);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
@@ -479,7 +480,7 @@
             this.PanelPacientes.Controls.Add(this.txtNombre);
             this.PanelPacientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelPacientes.Location = new System.Drawing.Point(0, 847);
-            this.PanelPacientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelPacientes.Margin = new System.Windows.Forms.Padding(4);
             this.PanelPacientes.Name = "PanelPacientes";
             this.PanelPacientes.Size = new System.Drawing.Size(1712, 501);
             this.PanelPacientes.TabIndex = 3;
@@ -488,7 +489,7 @@
             // 
             this.FotoPaciente.Image = global::SeñalesMioelectricas.Properties.Resources.UsuarioHombre;
             this.FotoPaciente.Location = new System.Drawing.Point(109, 15);
-            this.FotoPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FotoPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.FotoPaciente.Name = "FotoPaciente";
             this.FotoPaciente.Size = new System.Drawing.Size(213, 194);
             this.FotoPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -558,7 +559,7 @@
             this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(1445, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 501);
             this.panel1.TabIndex = 6;
@@ -574,7 +575,7 @@
             this.btnEliminar.Image = global::SeñalesMioelectricas.Properties.Resources.Eliminar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(0, 182);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(267, 91);
             this.btnEliminar.TabIndex = 7;
@@ -593,7 +594,7 @@
             this.btnEditar.Image = global::SeñalesMioelectricas.Properties.Resources.Editar;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar.Location = new System.Drawing.Point(0, 91);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(267, 91);
             this.btnEditar.TabIndex = 6;
@@ -612,7 +613,7 @@
             this.btnAgregar.Image = global::SeñalesMioelectricas.Properties.Resources.Añadir;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.Location = new System.Drawing.Point(0, 0);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(267, 91);
             this.btnAgregar.TabIndex = 5;
@@ -623,7 +624,7 @@
             // txtNotas
             // 
             this.txtNotas.Location = new System.Drawing.Point(476, 289);
-            this.txtNotas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNotas.Margin = new System.Windows.Forms.Padding(4);
             this.txtNotas.Multiline = true;
             this.txtNotas.Name = "txtNotas";
             this.txtNotas.Size = new System.Drawing.Size(648, 208);
@@ -632,7 +633,7 @@
             // txtLecturas
             // 
             this.txtLecturas.Location = new System.Drawing.Point(109, 289);
-            this.txtLecturas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLecturas.Margin = new System.Windows.Forms.Padding(4);
             this.txtLecturas.Multiline = true;
             this.txtLecturas.Name = "txtLecturas";
             this.txtLecturas.Size = new System.Drawing.Size(257, 208);
@@ -641,7 +642,7 @@
             // txtMusculo
             // 
             this.txtMusculo.Location = new System.Drawing.Point(939, 91);
-            this.txtMusculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMusculo.Margin = new System.Windows.Forms.Padding(4);
             this.txtMusculo.Name = "txtMusculo";
             this.txtMusculo.Size = new System.Drawing.Size(185, 22);
             this.txtMusculo.TabIndex = 2;
@@ -649,7 +650,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(672, 91);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(185, 22);
             this.txtApellido.TabIndex = 1;
@@ -657,7 +658,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(425, 91);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(185, 22);
             this.txtNombre.TabIndex = 0;
@@ -669,7 +670,7 @@
             this.PanelAplicacionCuerpo.Controls.Add(this.PanelLectura);
             this.PanelAplicacionCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelAplicacionCuerpo.Location = new System.Drawing.Point(0, 0);
-            this.PanelAplicacionCuerpo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelAplicacionCuerpo.Margin = new System.Windows.Forms.Padding(4);
             this.PanelAplicacionCuerpo.Name = "PanelAplicacionCuerpo";
             this.PanelAplicacionCuerpo.Size = new System.Drawing.Size(1712, 863);
             this.PanelAplicacionCuerpo.TabIndex = 2;
@@ -678,6 +679,7 @@
             // 
             this.PanelLectura.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelLectura.BackgroundImage")));
             this.PanelLectura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelLectura.Controls.Add(this.comboBox1);
             this.PanelLectura.Controls.Add(this.btnDetenerEsc);
             this.PanelLectura.Controls.Add(this.btnCaptura);
             this.PanelLectura.Controls.Add(this.btnEscribir);
@@ -710,7 +712,7 @@
             this.PanelLectura.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLectura.Font = new System.Drawing.Font("Bahnschrift Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLectura.Location = new System.Drawing.Point(0, 0);
-            this.PanelLectura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelLectura.Margin = new System.Windows.Forms.Padding(4);
             this.PanelLectura.Name = "PanelLectura";
             this.PanelLectura.Size = new System.Drawing.Size(1712, 847);
             this.PanelLectura.TabIndex = 2;
@@ -723,8 +725,8 @@
             this.cmbPacientes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPacientes.ForeColor = System.Drawing.Color.Black;
             this.cmbPacientes.FormattingEnabled = true;
-            this.cmbPacientes.Location = new System.Drawing.Point(473, 224);
-            this.cmbPacientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbPacientes.Location = new System.Drawing.Point(473, 225);
+            this.cmbPacientes.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPacientes.Name = "cmbPacientes";
             this.cmbPacientes.Size = new System.Drawing.Size(355, 37);
             this.cmbPacientes.TabIndex = 3;
@@ -736,6 +738,20 @@
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Black;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(473, 315);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(355, 37);
+            this.comboBox1.TabIndex = 21;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Aplicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -746,7 +762,7 @@
             this.ClientSize = new System.Drawing.Size(1712, 863);
             this.Controls.Add(this.PanelAplicacionCuerpo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1533, 813);
             this.Name = "Aplicacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -818,5 +834,6 @@
         private System.Windows.Forms.Button btnCaptura;
         private System.Windows.Forms.ComboBox cmbPacientes;
         private System.Windows.Forms.Panel PanelLectura;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
