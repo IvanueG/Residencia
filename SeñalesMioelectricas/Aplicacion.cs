@@ -254,7 +254,7 @@ namespace SeñalesMioelectricas
             while (driver.Count > 0)
             {
                 DaneSerialPort data = driver.Dequeue();
-                for (int g = 0; g < data.variable.Length; g++)
+                for (int g = 0; g < data.variable.Length; g++) //ASDHASFHNASFHNASFJKFFSABHFAK
                 {
                     
 
