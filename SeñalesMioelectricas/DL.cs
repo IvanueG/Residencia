@@ -66,7 +66,8 @@ namespace SeñalesMioelectricas
         ,int Gestante
         ,int Actividad_fisica
         ,int Diabetico
-        ,int Medicamento)
+        ,int Medicamento
+        ,int Edad)
         {
             string Query = "dbo.InsertaPaciente";
             SqlParameter[] Par = new SqlParameter[10];
@@ -82,6 +83,9 @@ namespace SeñalesMioelectricas
             Par[4].Value = Diabetico;
             Par[5] = new SqlParameter("@Medicamento", SqlDbType.Int);
             Par[5].Value = Medicamento;
+            Par[6] = new SqlParameter("@Edad", SqlDbType.Int);
+            Par[6].Value = Edad;
+
 
             SqlHelper.ExecuteDataset(conex, CommandType.StoredProcedure, Query, Par);
 

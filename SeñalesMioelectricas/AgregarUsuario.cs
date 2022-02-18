@@ -62,6 +62,7 @@ namespace SeñalesMioelectricas
                     , cmbActFisica.SelectedIndex
                     , cmbDiabetico.SelectedIndex
                     , cmbMedicamentos.SelectedIndex
+                    , int.Parse(txtEdad.Text)
                     );
 
                     MessageBox.Show("Paciente registrado exitosamente");
